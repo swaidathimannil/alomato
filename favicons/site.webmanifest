@@ -1,0 +1,29 @@
+{
+  "name": "Alomato — AI Automation Studio",
+  "short_name": "Alomato",
+  "description": "AI automation systems for real businesses — lead capture, follow-up, and workflows on autopilot.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FBF3EE",
+  "theme_color": "#C02028",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
