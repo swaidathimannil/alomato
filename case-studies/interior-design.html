@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Interior Design — WhatsApp Lead Engine · Case Study · Alomato</title>
-<meta name="description" content="A 107-node n8n system that answers every interior-design enquiry on WhatsApp in under 60 seconds, extracts the full brief, books the designer, and follows up automatically.">
+<meta name="description" content="Your 11pm enquiry, answered in 60 seconds: a 107-node n8n system that catches, qualifies, books, and follows up every WhatsApp lead — so your studio stops losing work to faster replies.">
 <link rel="icon" href="../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
 <link rel="apple-touch-icon" href="../favicons/apple-touch-icon.png">
@@ -326,19 +326,29 @@
   @media(max-width:560px){.cs-crumb{display:none}}
   .cs-cta{white-space:nowrap}
   .cs-hero{max-width:1080px;margin:0 auto;padding:64px 6vw 8px}
-  .cs-hero h1{max-width:22ch}
+  .cs-hero h1{max-width:24ch}
   .cs-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .cs-meta span{font-size:.78rem;font-weight:600;color:var(--accent-deep);background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
   .cs-sec{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .cs-sec.on{opacity:1;transform:none}
-  .cs-sec .sec-head h2{max-width:26ch}
+  .cs-sec .sec-head h2{max-width:28ch}
   .cs-pains{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
   @media(max-width:860px){.cs-pains{grid-template-columns:1fr}}
   .pain{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px}
   .pain .ico{width:44px;height:44px;font-size:1.4rem;display:grid;place-items:center;border-radius:12px;background:rgba(192,32,40,.08)}
   .pain h3{font-size:1.02rem;line-height:1.35}
   .pain p{color:var(--muted);font-size:.9rem;line-height:1.55}
-  .pain .cost{margin-top:auto;font-size:.78rem;font-weight:700;color:var(--accent-deep);background:rgba(192,32,40,.08);border:1px dashed rgba(192,32,40,.3);padding:7px 12px;border-radius:10px;align-self:flex-start}
+  .pain .cost{margin-top:auto;font-size:.78rem;font-weight:700;color:#fff;background:var(--accent);padding:7px 12px;border-radius:10px;align-self:flex-start}
+  .cs-bill{background:var(--ink);border-radius:var(--radius);padding:26px 24px;margin-top:18px;color:#fff}
+  .cs-bill-label{display:block;font-size:.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#EFC189;margin-bottom:16px}
+  .cs-bill-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  @media(max-width:600px){.cs-bill-row{grid-template-columns:1fr}}
+  .cs-bill-cell{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px}
+  .cs-bill-cell b{display:block;font-size:1.35rem;letter-spacing:-.5px;color:#fff}
+  .cs-bill-cell span{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.4;display:block;margin-top:2px}
+  .cs-bill-total{margin:16px 0 6px;font-size:1.05rem;color:rgba(255,255,255,.85)}
+  .cs-bill-total b{color:#EFC189}
+  .cs-bill-fine{margin:0;color:rgba(255,255,255,.45);font-size:.75rem;line-height:1.5;max-width:640px}
   .cs-day-times{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
   .cs-day-time{font:inherit;font-weight:700;font-size:.85rem;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
   .cs-day-time:hover{border-color:rgba(192,32,40,.4)}
@@ -382,7 +392,7 @@
   @keyframes msgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .msg.in{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
   .msg.out{align-self:flex-end;background:#FDECEA;border:1px solid rgba(192,32,40,.18);border-bottom-right-radius:4px}
-  .msg.sys{align-self:center;background:none;border:none;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 0}
+  .msg.sys{align-self:center;background:none;border:none;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 0;text-align:center}
   .msg-typing{display:flex;gap:4px;align-items:center;padding:12px 14px}
   .msg-typing span{width:6px;height:6px;border-radius:50%;background:rgba(46,13,8,.35);animation:blink 1s infinite}
   .msg-typing span:nth-child(2){animation-delay:.2s}
@@ -435,8 +445,8 @@
 
 <header class="cs-hero">
   <span class="pill">Case Study · Interior Design</span>
-  <h1>Every enquiry answered in <span class="grad">under 60 seconds.</span> Even the 11pm ones.</h1>
-  <p class="hero-sub">The client profile: a 3-person interior design studio — two designers, one admin — whose enquiries all arrive on WhatsApp, and whose replies arrive whenever someone can. This is the system I built for exactly that setup, end to end.</p>
+  <h1>It’s 11:47 PM. <span class="grad">Your phone is on silent.</span> A 2BHK enquiry just landed.</h1>
+  <p class="hero-sub">This is the system I built for a 3-person studio — two designers, one admin — where every enquiry arrives on WhatsApp, and the first serious reply usually wins the meeting. If your studio runs like that, this page is about you.</p>
   <div class="cs-meta"><span>n8n · 5 workflows</span><span>WhatsApp Cloud API</span><span>Google Calendar</span><span>AI decision model</span><span>107 nodes</span></div>
 </header>
 <main>
@@ -445,27 +455,37 @@
 <section id="problem" class="cs-sec">
   <div class="sec-head">
     <span class="sec-label">01 · The Problem</span>
-    <h2>Great designs. Slow starts.</h2>
+    <h2>Great designs. Slow starts. That’s how the work gets lost.</h2>
   </div>
   <div class="cs-pains">
     <div class="pain">
       <div class="ico" aria-hidden="true">🌙</div>
-      <h3>“They text me at night — I reply in the morning.”</h3>
-      <p>Enquiries land 9pm to 2am, while the team is on a site visit or asleep. By the time the first reply goes out, the client has sent the same brief to two other studios.</p>
-      <span class="cost">First reply: 8–14 hours</span>
+      <h3>Your reply comes at 9. The client decided at 10.</h3>
+      <p>Enquiries land 9pm to 2am — while you’re on a site visit or asleep. By your first reply, the client has already spoken to two faster studios. In this business, the first serious reply usually wins the meeting, not the prettier portfolio.</p>
+      <span class="cost">Cost of one lost lead: ₹60–80K in design fees</span>
     </div>
     <div class="pain">
       <div class="ico" aria-hidden="true">🧵</div>
-      <h3>“The brief is buried in a 200-message chat.”</h3>
-      <p>Location, budget, timeline, style — scattered across long threads and voice notes. Every project starts by re-asking the same five questions.</p>
-      <span class="cost">First quote: 2 days late</span>
+      <h3>You re-ask the same five questions on every single project.</h3>
+      <p>The budget is in message 47. The timeline is in a voice note. The location is “somewhere in Kochi”. Every quote starts behind, because the brief is buried in a 200-message chat nobody wants to re-read.</p>
+      <span class="cost">Cost: your first quote lands 2 days late</span>
     </div>
     <div class="pain">
       <div class="ico" aria-hidden="true">📉</div>
-      <h3>“After the first reply, it just goes quiet.”</h3>
-      <p>No follow-up system. The lead cools, and nobody knows who was last contacted, when, or what was promised.</p>
-      <span class="cost">Most enquiries die at message one</span>
+      <h3>Then the chat goes quiet. And so does the deal.</h3>
+      <p>No one owns the follow-up. The lead cools, you assume someone else is on it, and three weeks later the client signs with a competitor — and tells you “we’re not doing it right now”.</p>
+      <span class="cost">Cost: most enquiries die at message one</span>
     </div>
+  </div>
+  <div class="cs-bill">
+    <span class="cs-bill-label">Do the math — one ordinary month</span>
+    <div class="cs-bill-row">
+      <div class="cs-bill-cell"><b>12</b><span>late-night enquiries a month</span></div>
+      <div class="cs-bill-cell"><b>1 in 5</b><span>lost to a faster reply</span></div>
+      <div class="cs-bill-cell"><b>₹70K</b><span>fees per lost project (typical)</span></div>
+    </div>
+    <p class="cs-bill-total">= ~<b>₹1.5L a month</b> in fees — gone before a single site visit.</p>
+    <p class="cs-bill-fine">Worked example from typical market rates, not a claim about your books. The free audit runs this exact math on your real numbers.</p>
   </div>
 </section>
 
@@ -483,43 +503,43 @@
     <button class="cs-day-time" type="button">9:58 PM</button>
     <button class="cs-day-time" type="button">11:40 PM</button>
   </div>
-  <div class="cs-day-body" id="dayBody"></div>
+  <div class="cs-day-body" id="dayBody"><noscript><p>Enable JavaScript to explore this day.</p></noscript></div>
 </section>
 
 <!-- 03 SYSTEM -->
 <section id="system" class="cs-sec">
   <div class="sec-head">
     <span class="sec-label">03 · The System</span>
-    <h2>The machine that fixes it</h2>
-    <p class="sec-sub">Click any node to see what it does — or press play and watch a real conversation travel through the whole thing.</p>
+    <h2>The machine that stops it</h2>
+    <p class="sec-sub">Click any node to see what it does — then press play and watch a real conversation travel through the whole thing.</p>
   </div>
   <div class="cs-flow-wrap">
     <button class="cs-play" id="playBtn" type="button">&#9654; Watch a lead travel through it</button>
     <div class="cs-flow">
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📡</span><span class="n-title">Catch</span><span class="n-sub">webhook · validation · dedup</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📡</span><span class="n-title">Catch</span><span class="n-sub">0.4 seconds</span></button>
       <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🧠</span><span class="n-title">Understand</span><span class="n-sub">AI reads, rules decide</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🎯</span><span class="n-title">Score</span><span class="n-sub">deterministic, always the same</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">💬</span><span class="n-title">Reply</span><span class="n-sub">FAQ-first, policy-checked</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📅</span><span class="n-title">Book</span><span class="n-sub">real slots, no double-booking</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🔁</span><span class="n-title">Follow up</span><span class="n-sub">days 1 · 3 · 7, then it stops</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🚨</span><span class="n-title">Hand off</span><span class="n-sub">humans get humans</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🎯</span><span class="n-title">Score</span><span class="n-sub">Rules, not vibes</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">💬</span><span class="n-title">Reply</span><span class="n-sub">Checked before it sends</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📅</span><span class="n-title">Book</span><span class="n-sub">Real slots only</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🔁</span><span class="n-title">Follow up</span><span class="n-sub">Days 1 · 3 · 7</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🚨</span><span class="n-title">Hand off</span><span class="n-sub">You get the hot ones</span></button>
     </div>
   </div>
-  <div class="cs-flow-detail" id="flowDetail" aria-live="polite"></div>
+  <div class="cs-flow-detail" id="flowDetail" aria-live="polite"><noscript><p>Enable JavaScript to explore each step of the system.</p></noscript></div>
   <div class="cs-sim" style="margin-top:20px">
     <div class="cs-phone" aria-label="Simulated WhatsApp conversation">
       <div class="cs-phone-head"><span class="avatar" aria-hidden="true">💬</span><span>Customer<small>WhatsApp · automated replies</small></span></div>
-      <div class="cs-chat" id="chat"></div>
+      <div class="cs-chat" id="chat"><noscript><p>Enable JavaScript to watch the conversation play out.</p></noscript></div>
     </div>
     <div class="cs-caps">
       <h3>Under the surface</h3>
       <p>The same conversation, narrated by the system.</p>
-      <p class="cs-stepcap" data-i="0"><b>1.</b>Caught in under a second — validated, deduplicated, logged.</p>
-      <p class="cs-stepcap" data-i="1"><b>2.</b>AI classified it as a new enquiry and started the brief — no human yet.</p>
-      <p class="cs-stepcap" data-i="2"><b>3.</b>Budget extracted: 40L. Scored 72/100 — hot lane.</p>
-      <p class="cs-stepcap" data-i="3"><b>4.</b>Only real calendar slots were offered. Nothing promised that wasn’t free.</p>
-      <p class="cs-stepcap" data-i="4"><b>5.</b>Appointment written to the lead record and synced to the Google Sheet.</p>
-      <p class="cs-stepcap" data-i="5"><b>6.</b>Day-3 follow-up, sent by the scheduler — no human had to remember.</p>
+      <p class="cs-stepcap" data-i="0"><b>1.</b>0.4s — caught, validated, deduped. Already in the system.</p>
+      <p class="cs-stepcap" data-i="1"><b>2.</b>AI classified it: new enquiry. Brief started — no human yet.</p>
+      <p class="cs-stepcap" data-i="2"><b>3.</b>Budget extracted: 40L → scored 72/100. Hot lane.</p>
+      <p class="cs-stepcap" data-i="3"><b>4.</b>Only real calendar slots offered. Nothing invented.</p>
+      <p class="cs-stepcap" data-i="4"><b>5.</b>Booked — written to the lead record and the Google Sheet.</p>
+      <p class="cs-stepcap" data-i="5"><b>6.</b>Day 3. The scheduler sent this. You didn’t have to.</p>
     </div>
   </div>
 </section>
@@ -533,14 +553,14 @@
   <table class="cs-results">
     <thead><tr><th>Metric</th><th>Before</th><th>After</th></tr></thead>
     <tbody>
-      <tr><td class="metric">First reply</td><td class="before">8–14 hours</td><td class="after"><span class="count" data-to="60" data-prefix="&lt;">&lt;60</span> seconds, 24/7</td></tr>
-      <tr><td class="metric">Full brief before a human replies</td><td class="before">0% of leads</td><td class="after"><span class="count" data-to="100" data-suffix="%">100%</span> of leads</td></tr>
-      <tr><td class="metric">Follow-ups per lead</td><td class="before">0 — when someone remembers</td><td class="after">3, on days 1 · 3 · 7</td></tr>
-      <tr><td class="metric">Enquiries answered at night</td><td class="before">0</td><td class="after"><span class="count" data-to="100" data-suffix="%">100%</span></td></tr>
-      <tr><td class="metric">Admin time returned</td><td class="before">—</td><td class="after">≈ 6 hrs / week</td></tr>
+      <tr><td class="metric">First reply</td><td class="before">8–14 hours</td><td class="after"><span class="count" data-to="60" data-prefix="&lt;">&lt;60</span> seconds — at 11:47 PM or 3 PM</td></tr>
+      <tr><td class="metric">Brief complete before a human replies</td><td class="before">0% of leads</td><td class="after"><span class="count" data-to="100" data-suffix="%">100%</span> of leads</td></tr>
+      <tr><td class="metric">Follow-ups per lead</td><td class="before">0 — when someone remembers</td><td class="after">3 — days 1, 3, 7, automatically</td></tr>
+      <tr><td class="metric">Late-night enquiries won</td><td class="before">0 — by definition</td><td class="after"><span class="count" data-to="100" data-suffix="%">100%</span> — the system doesn’t sleep</td></tr>
+      <tr><td class="metric">Fees at risk from slow replies (worked example)</td><td class="before">~₹1.5L / month</td><td class="after">~₹0</td></tr>
     </tbody>
   </table>
-  <p class="cs-fine">This is a production build I ran end-to-end with simulated traffic. The figures are what the system does — not a promise of identical numbers in your business.</p>
+  <p class="cs-fine">Built end-to-end and run with simulated traffic. The fee numbers are worked examples from typical market rates — not a promise. Your audit runs the same math on your real books.</p>
 </section>
 
 <!-- 05 UNDER THE HOOD -->
@@ -550,19 +570,19 @@
     <h2>The details that make it production-grade</h2>
   </div>
   <div class="cs-chips">
-    <div class="hood"><h3>Deduplication by phone</h3><p>One lead, one row, keyed to the last 10 digits of the phone number. Fifty texts from the same person don’t become fifty leads.</p></div>
-    <div class="hood"><h3>Bounded retries</h3><p>Every WhatsApp send and sheet sync retries with a backoff cap. If it still fails, it lands in a retry queue — never dropped, never pretended.</p></div>
-    <div class="hood"><h3>Voice notes, Malayalam & missed calls</h3><p>Voice notes are transcribed before the AI reads them — Malayalam included. A missed call triggers a recovery message.</p></div>
-    <div class="hood"><h3>An error workflow of its own</h3><p>A fifth workflow watches the other four. Failures are logged to an internal table and page the admin on WhatsApp.</p></div>
-    <div class="hood"><h3>The AI is policed</h3><p>Replies are generated, then re-checked by a separate model against the approved FAQ. If the AI is down, deterministic fallbacks take over.</p></div>
-    <div class="hood"><h3>No AI scoring, ever</h3><p>The AI extracts and classifies. Rules score. When a machine is deciding who’s “hot”, the decision should be one you can read line by line.</p></div>
+    <div class="hood"><h3>Deduplication by phone</h3><p>One lead, one row, keyed to the last 10 digits of the number. Fifty texts from the same person is still one lead.</p></div>
+    <div class="hood"><h3>Bounded retries</h3><p>Every send and sync retries with a cap. If it still fails, it lands in a retry queue — never dropped, never pretended.</p></div>
+    <div class="hood"><h3>Voice notes — including Malayalam</h3><p>Transcribed before the AI reads them. A missed call triggers a recovery message. Nothing important dies in a voice memo.</p></div>
+    <div class="hood"><h3>An error workflow of its own</h3><p>A fifth workflow watches the other four. Failures get logged and page the admin on WhatsApp.</p></div>
+    <div class="hood"><h3>The AI is policed</h3><p>Replies are generated, then re-checked by a separate model against the approved FAQ. AI down? Deterministic fallbacks take over.</p></div>
+    <div class="hood"><h3>No AI scoring, ever</h3><p>The AI extracts and classifies. Rules score. If a machine is deciding who’s “hot”, the decision should be one you can read line by line.</p></div>
   </div>
 </section>
 <section id="cta" class="cs-sec">
   <div class="follow-card">
     <span class="sec-label">Next</span>
-    <h2>Want this on your business?</h2>
-    <p>Every build starts with a free 20-minute audit — no pitch deck. Just an honest look at where your business is leaking time and leads, and what's worth automating first.</p>
+    <h2>Stop losing the 11pm leads.</h2>
+    <p>A free 20-minute audit: we find your leaks, run the math on your real numbers, and show you exactly what’s worth automating first. No pitch deck.</p>
     <a class="btn btn-accent" href="https://form.typeform.com/to/JVZF84PA" target="_blank" rel="noopener">Get your free automation audit &rarr;</a>
     <a class="cs-home" href="..">&larr; All case studies</a>
   </div>
@@ -574,96 +594,169 @@
 <script>
 
 (() => {
-  const D = {"day": [["9:40 AM", "The studio is on a site visit. The phone buzzes four times.", "Two fresh enquiries sit unanswered for six hours."], ["2:15 PM", "Admin finally answers the first one \u2014 and starts re-asking the basics.", "That afternoon, the client was comparing three studios."], ["5:30 PM", "A voice note arrives with the budget and location in it. Nobody listens until tomorrow.", "The most useful information of the day, unheard overnight."], ["9:58 PM", "A hot lead texts: \u201ccan we meet tomorrow?\u201d", "First reply at 10am \u2014 by then the meeting is booked with another studio."], ["11:40 PM", "Nobody is watching. The lead has gone quiet.", "No follow-up was ever scheduled. It just\u2026 stops."]], "flow": [["\ud83d\udce1", "Catch", "Receive Lead", "webhook \u00b7 validation \u00b7 dedup", "Every WhatsApp event \u2014 message, voice note, even a missed call \u2014 is caught by a webhook, validated, and deduplicated before anything else happens. One lead, one record, no matter how many times they text."], ["\ud83e\udde0", "Understand", "Extract + Classify", "AI reads, rules decide", "A decision model reads the message: what they want, what they\u2019ve said, whether a human is needed. Requirements come out as clean data \u2014 not a chat log \u2014 and every extraction is checked before it\u2019s trusted."], ["\ud83c\udfaf", "Score", "Calculate Lead Score", "deterministic, always the same", "Location, budget, timeline \u2014 each worth points in a rules table. The AI never scores a lead; code does, so every lead is graded the same way, every time."], ["\ud83d\udcac", "Reply", "Generate + Verify", "FAQ-first, policy-checked", "Replies are generated from the approved FAQ, then verified by a second model before they\u2019re allowed to send. If the system can\u2019t answer from the FAQ, it hands off to a human \u2014 in the same conversation, not a ticket."], ["\ud83d\udcc5", "Book", "Google Calendar", "real slots, no double-booking", "The system reads the designers\u2019 actual calendars, offers only slots that exist, books the appointment, and confirms it. No \u201clet me check and get back to you.\u201d"], ["\ud83d\udd01", "Follow up", "Scheduler", "days 1 \u00b7 3 \u00b7 7, then it stops", "A scheduler runs every 15 minutes and touches each lead on day one, three, and seven \u2014 then stops. No manual chasing, no over-texting, no guilt."], ["\ud83d\udea8", "Hand off", "Hot leads + Error workflow", "humans get humans", "Any lead scoring 70+ pages the team instantly with a full brief. And a fifth workflow watches the other four: if anything breaks, the admin gets a WhatsApp alert. It fails loudly, never silently."]], "sim": [{"node": 0, "who": "customer", "text": "Hi! Do you do 2BHK interiors? Looking in Kochi \ud83d\ude42", "cap": 0}, {"node": 1, "who": "system", "text": "Hi! Yes, we do 2BHKs \u2014 and I can have a designer look at this for you. Quick one: what\u2019s your rough budget range?", "cap": 1}, {"node": 2, "who": "customer", "text": "Around 40L, all-in if possible", "cap": 2}, {"node": 3, "who": "system", "text": "Noted \u2014 2BHK, Kochi, ~40L. A designer is free Tue 4pm, Wed 11am, or Thu 2pm. Which works for you?", "cap": 3}, {"node": 4, "who": "customer", "text": "Tuesday 4pm works!"}, {"node": 4, "who": "system", "text": "Booked \u2705 Calendar invite sent. A designer will call before the visit to prepare. Talk soon!"}, {"sys": "DAY 3 \u2014 FOLLOW-UP SCHEDULER"}, {"node": 5, "who": "system", "text": "Hi again! Just checking in \u2014 plans for the 2BHK still on? Happy to share two concept references this week.", "cap": 5}]};
-  const prog = document.getElementById('progress');
-  if (prog) addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const max = h.scrollHeight - h.clientHeight;
-    prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-  }, { passive: true });
+  try {
+    const D = {"day": [{"time": "9:40 AM", "happened": "You\u2019re on a site visit. The phone buzzes four times.", "lost": "2 fresh enquiries sit 6 hours un-answered \u2014 long enough for three studios to respond."}, {"time": "2:15 PM", "happened": "You answer the first one \u2014 and start asking questions you already know.", "lost": "20 minutes of re-asking, while the client is comparing you to the studio that replied at 10."}, {"time": "5:30 PM", "happened": "A voice note arrives. The budget and the location are in it. You listen tomorrow.", "lost": "The best qualification info of the day, sitting unread overnight."}, {"time": "9:58 PM", "happened": "\u201cCan we meet tomorrow?\u201d \u2014 from the hottest lead of the week.", "lost": "Your reply reaches 9am. By then the meeting is booked with the studio that replied at 10."}, {"time": "11:40 PM", "happened": "It\u2019s quiet. The lead has stopped waiting.", "lost": "No follow-up is scheduled, by anyone. This lead is gone by 12:03 AM."}], "flow": [{"ico": "\ud83d\udce1", "title": "Catch", "sub": "0.4 seconds", "what": "A webhook catches every WhatsApp event \u2014 text, voice note, even a missed call \u2014 validates it, and deduplicates it. The 11:47 PM enquiry is already in the system before you\u2019d notice your phone buzz."}, {"ico": "\ud83e\udde0", "title": "Understand", "sub": "AI reads, rules decide", "what": "A decision model reads the message: what they want, what they\u2019ve said, whether a human is needed. The brief comes out as clean data \u2014 not a 200-message chat."}, {"ico": "\ud83c\udfaf", "title": "Score", "sub": "Rules, not vibes", "what": "Location, budget, timeline \u2014 each worth points in a table you can read. The AI never scores a lead. Code does, so every lead is graded the same way, every time."}, {"ico": "\ud83d\udcac", "title": "Reply", "sub": "Checked before it sends", "what": "Replies come only from the approved FAQ \u2014 and a second model verifies each one before it goes out. If the system can\u2019t answer, a human takes over in the same chat, not a ticket."}, {"ico": "\ud83d\udcc5", "title": "Book", "sub": "Real slots only", "what": "It reads the designers\u2019 actual calendars, offers only times that exist, books, and confirms. No \u201clet me check and get back to you\u201d \u2014 at any hour of the night."}, {"ico": "\ud83d\udd01", "title": "Follow up", "sub": "Days 1 \u00b7 3 \u00b7 7", "what": "A scheduler touches every lead on day one, three, and seven \u2014 then stops. The chat never \u201cgoes quiet\u201d without a reason."}, {"ico": "\ud83d\udea8", "title": "Hand off", "sub": "You get the hot ones", "what": "Anything scoring 70+ pages you instantly with the full brief. And if anything breaks, a dedicated error workflow calls you on WhatsApp. It fails loudly, never silently."}], "sim": [{"node": 0, "who": "customer", "text": "Hi! Do you do 2BHK interiors? Looking in Kochi \ud83d\ude42 It\u2019s late \u2014 sorry if this reaches you tomorrow", "cap": 0}, {"node": 1, "who": "system", "text": "No worries at all \ud83d\ude42 We do 2BHKs. One quick thing so a designer can prepare: what\u2019s your rough budget range?", "cap": 1}, {"node": 2, "who": "customer", "text": "Around 40L, all-in if possible", "cap": 2}, {"node": 3, "who": "system", "text": "Noted \u2014 2BHK, Kochi, ~40L. A designer is free Tue 4pm, Wed 11am, or Thu 2pm. Which works for you?", "cap": 3}, {"node": 4, "who": "customer", "text": "Tuesday 4pm works!"}, {"node": 4, "who": "system", "text": "Booked \u2705 Invite sent. A designer will call before the visit to prepare. Sleep well \u2014 it\u2019s handled."}, {"sys": "DAY 3 \u2014 THE SCHEDULER, NOT A HUMAN"}, {"node": 5, "who": "system", "text": "Hi again! 2BHK plans still on? We\u2019ve just put together two concept references for a similar Kochi project \u2014 happy to share.", "cap": 5}]} || {};
+    // Never let a bad value reach the DOM.
+    const txt = v => (v === undefined || v === null) ? '' : String(v);
+    // Accept object data; fall back to positional arrays (legacy shape).
+    const normDay = m => Array.isArray(m) ? { time: m[0], happened: m[1], lost: m[2] } : (m || {});
+    const normFlow = n => Array.isArray(n) ? { ico: n[0], title: n[1], sub: n[3], what: n[4] } : (n || {});
 
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
-  }), { threshold: 0.12 });
-  document.querySelectorAll('.cs-sec').forEach(el => io.observe(el));
+    const prog = document.getElementById('progress');
+    if (prog) addEventListener('scroll', () => {
+      const h = document.documentElement;
+      if (!h) return;
+      const max = h.scrollHeight - h.clientHeight;
+      prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    }, { passive: true });
 
-  if (D.day) {
-    const body = document.getElementById('dayBody');
-    const setDay = i => {
-      document.querySelectorAll('.cs-day-time').forEach((b, j) => b.classList.toggle('active', j === i));
-      const m = D.day[i];
-      body.innerHTML = '<div class="cs-day-time-big">' + m.time + '</div><div><p>' + m.happened + '</p><p class="cs-lost"><span>Lost</span>' + m.lost + '</p></div>';
-    };
-    document.querySelectorAll('.cs-day-time').forEach((b, j) => b.addEventListener('click', () => setDay(j)));
-    setDay(0);
-  }
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.cs-sec').forEach(el => io.observe(el));
 
-  if (D.flow) {
-    const nodes = [...document.querySelectorAll('.cs-node')];
-    const detail = document.getElementById('flowDetail');
-    const showNode = i => {
-      nodes.forEach((n, j) => n.classList.toggle('active', j === i));
-      const n = D.flow[i];
-      detail.innerHTML = '<div class="cs-fd-top"><span class="cs-fd-ico">' + n.ico + '</span><div><h3>' + n.title + '</h3><p class="cs-fd-sub">' + n.sub + '</p></div></div><p>' + n.what + '</p>';
-    };
-    let chatBusy = false;
-    nodes.forEach((n, i) => n.addEventListener('click', () => { if (!chatBusy) showNode(i); }));
-    showNode(0);
-
-    const chat = document.getElementById('chat');
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    const scrollChat = () => { chat.scrollTop = chat.scrollHeight; };
-    const addMsg = (cls, text) => {
-      const d = document.createElement('div');
-      d.className = 'msg ' + cls; d.textContent = text;
-      chat.appendChild(d); scrollChat();
-    };
-    const typing = cls => {
-      const d = document.createElement('div');
-      d.className = 'msg ' + cls + ' msg-typing';
-      d.innerHTML = '<span></span><span></span><span></span>';
-      chat.appendChild(d); scrollChat();
-      return d;
-    };
-    const btn = document.getElementById('playBtn');
-    btn.addEventListener('click', async () => {
-      if (chatBusy) return;
-      chatBusy = true;
-      btn.classList.add('playing'); btn.textContent = '\u23F3 Watching\u2026';
-      chat.innerHTML = '';
-      document.querySelectorAll('.cs-stepcap').forEach(c => c.classList.remove('on'));
-      for (const s of D.sim) {
-        if (s.node !== undefined) showNode(s.node);
-        if (s.cap !== undefined) {
-          const c = document.querySelector('.cs-stepcap[data-i="' + s.cap + '"]');
-          if (c) c.classList.add('on');
+    // ---------- 02 day timeline ----------
+    if (D.day && D.day.length) {
+      const body = document.getElementById('dayBody');
+      const setDay = i => {
+        const m = normDay(D.day[i]);
+        document.querySelectorAll('.cs-day-time').forEach((b, j) => b.classList.toggle('active', j === i));
+        if (!body) return;
+        if (!m.time && !m.happened && !m.lost) {
+          body.innerHTML = '<p>Nothing to show for this moment yet.</p>';
+          return;
         }
-        if (s.sys) { addMsg('sys', s.sys); await sleep(1000); }
-        const cls = s.who === 'customer' ? 'in' : 'out';
-        const t = typing(cls);
-        await sleep(s.who === 'customer' ? 900 : 1300);
-        t.remove();
-        addMsg(cls, s.text);
-        await sleep(1500);
-      }
-      chatBusy = false;
-      btn.classList.remove('playing'); btn.textContent = '\u25B6 Replay the journey';
-    });
-  }
+        body.innerHTML =
+          '<div class="cs-day-time-big">' + txt(m.time) + '</div>' +
+          '<div><p>' + txt(m.happened) + '</p>' +
+          '<p class="cs-lost"><span>Cost</span>' + txt(m.lost) + '</p></div>';
+      };
+      document.querySelectorAll('.cs-day-time').forEach((b, j) => b.addEventListener('click', () => setDay(j)));
+      setDay(0);
+    }
 
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    cio.unobserve(e.target);
-    const el = e.target, to = +el.dataset.to, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
-    const t0 = performance.now(), dur = 1200;
-    const tick = t => {
-      const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = pre + Math.round(to * ease) + suf;
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }), { threshold: 0.5 });
-  document.querySelectorAll('.count').forEach(el => cio.observe(el));
+    // ---------- 03 system flow + chat simulation ----------
+    if (D.flow && D.flow.length) {
+      const nodes = [...document.querySelectorAll('.cs-node')];
+      const detail = document.getElementById('flowDetail');
+      const showNode = i => {
+        const n = normFlow(D.flow[i]);
+        nodes.forEach((nd, j) => nd.classList.toggle('active', j === i));
+        if (!detail) return;
+        if (!n.title && !n.what) {
+          detail.innerHTML = '<p>Details for this step are coming soon.</p>';
+          return;
+        }
+        detail.innerHTML =
+          '<div class="cs-fd-top"><span class="cs-fd-ico">' + txt(n.ico) + '</span>' +
+          '<div><h3>' + txt(n.title) + '</h3><p class="cs-fd-sub">' + txt(n.sub) + '</p></div></div>' +
+          '<p>' + txt(n.what) + '</p>';
+      };
+      let chatBusy = false;
+      nodes.forEach((n, i) => n.addEventListener('click', () => { if (!chatBusy) showNode(i); }));
+      showNode(0);
+
+      const chat = document.getElementById('chat');
+      const btn = document.getElementById('playBtn');
+      const caps = [...document.querySelectorAll('.cs-stepcap')];
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+      const scrollChat = () => { if (chat) chat.scrollTop = chat.scrollHeight; };
+      const addMsg = (cls, text) => {
+        if (!chat) return;
+        const d = document.createElement('div');
+        d.className = 'msg ' + cls;
+        d.textContent = txt(text);
+        chat.appendChild(d);
+        scrollChat();
+      };
+      const typing = cls => {
+        if (!chat) return null;
+        const d = document.createElement('div');
+        d.className = 'msg ' + cls + ' msg-typing';
+        d.innerHTML = '<span></span><span></span><span></span>';
+        chat.appendChild(d);
+        scrollChat();
+        return d;
+      };
+
+      const play = async () => {
+        if (chatBusy) return;
+        chatBusy = true;
+        if (btn) { btn.classList.add('playing'); btn.textContent = '\u23F3 Watching\u2026'; }
+        if (chat) chat.innerHTML = '';
+        caps.forEach(c => c.classList.remove('on'));
+        try {
+          for (const s of D.sim || []) {
+            if (!s) continue;
+            if (s.node !== undefined) showNode(s.node);
+            if (s.cap !== undefined) {
+              const c = document.querySelector('.cs-stepcap[data-i="' + s.cap + '"]');
+              if (c) c.classList.add('on');
+            }
+            if (s.sys) { addMsg('sys', s.sys); await sleep(900); }
+            if (s.text) {
+              const cls = s.who === 'customer' ? 'in' : 'out';
+              const t = typing(cls);
+              await sleep(s.who === 'customer' ? 900 : 1300);
+              if (t) t.remove();
+              addMsg(cls, s.text);
+              await sleep(1500);
+            }
+          }
+        } catch (err) {
+          // A broken step never leaves the phone half-frozen.
+        } finally {
+          chatBusy = false;
+          if (btn) { btn.classList.remove('playing'); btn.textContent = '\u25B6 Replay the journey'; }
+        }
+      };
+
+      if (btn) btn.addEventListener('click', () => { play(); });
+
+      // The phone is never empty: a hint before the first play.
+      if (chat && D.sim && D.sim.length) {
+        const hint = document.createElement('div');
+        hint.className = 'msg sys';
+        hint.textContent = 'Press \u25B6 \u2014 or just scroll here \u2014 and watch the whole thing play out';
+        chat.appendChild(hint);
+      }
+
+      // Auto-play once, when the simulation scrolls into view.
+      const simEl = document.querySelector('.cs-sim');
+      if (simEl && typeof IntersectionObserver !== 'undefined') {
+        const sio = new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) { sio.unobserve(simEl); if (!chatBusy) play(); }
+        }), { threshold: 0.35 });
+        sio.observe(simEl);
+      }
+    }
+
+    // ---------- counters ----------
+    const cio = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      const el = e.target;
+      const to = +el.dataset.to;
+      if (!isFinite(to)) return;
+      const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+      const t0 = performance.now(), dur = 1200;
+      const tick = t => {
+        const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + Math.round(to * ease) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.5 });
+    document.querySelectorAll('.count').forEach(el => cio.observe(el));
+  } catch (err) {
+    // If anything unexpected breaks, say so — never show "undefined".
+    try {
+      const b = document.createElement('div');
+      b.style.cssText = 'max-width:720px;margin:16px auto;padding:14px 18px;border:1px solid #C02028;border-radius:12px;background:#FDECEA;color:#8E1218;font:14px/1.5 sans-serif';
+      b.textContent = 'Some interactive parts could not load. The rest of the page still works — nothing you need is lost.';
+      if (document.body) document.body.insertBefore(b, document.body.firstChild.nextSibling);
+    } catch (e2) { /* last resort: stay silent */ }
+  }
 })();
 
 </script>

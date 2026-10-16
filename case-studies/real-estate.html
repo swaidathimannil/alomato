@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Real Estate — Lead Capture & Routing · Case Study · Alomato</title>
-<meta name="description" content="Typeform and WhatsApp leads deduped, extracted with GPT-4.1-mini, routed to the right agent by area, briefed on Slack, and reported every Monday — one n8n pipeline.">
+<meta name="description" content="Two agents pitched the same buyer — neither knew it. One n8n pipeline that dedupes, extracts, and routes every Typeform and WhatsApp lead to the right agent, with a Monday report.">
 <link rel="icon" href="../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
 <link rel="apple-touch-icon" href="../favicons/apple-touch-icon.png">
@@ -326,19 +326,29 @@
   @media(max-width:560px){.cs-crumb{display:none}}
   .cs-cta{white-space:nowrap}
   .cs-hero{max-width:1080px;margin:0 auto;padding:64px 6vw 8px}
-  .cs-hero h1{max-width:22ch}
+  .cs-hero h1{max-width:24ch}
   .cs-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .cs-meta span{font-size:.78rem;font-weight:600;color:var(--accent-deep);background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
   .cs-sec{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .cs-sec.on{opacity:1;transform:none}
-  .cs-sec .sec-head h2{max-width:26ch}
+  .cs-sec .sec-head h2{max-width:28ch}
   .cs-pains{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
   @media(max-width:860px){.cs-pains{grid-template-columns:1fr}}
   .pain{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px}
   .pain .ico{width:44px;height:44px;font-size:1.4rem;display:grid;place-items:center;border-radius:12px;background:rgba(192,32,40,.08)}
   .pain h3{font-size:1.02rem;line-height:1.35}
   .pain p{color:var(--muted);font-size:.9rem;line-height:1.55}
-  .pain .cost{margin-top:auto;font-size:.78rem;font-weight:700;color:var(--accent-deep);background:rgba(192,32,40,.08);border:1px dashed rgba(192,32,40,.3);padding:7px 12px;border-radius:10px;align-self:flex-start}
+  .pain .cost{margin-top:auto;font-size:.78rem;font-weight:700;color:#fff;background:var(--accent);padding:7px 12px;border-radius:10px;align-self:flex-start}
+  .cs-bill{background:var(--ink);border-radius:var(--radius);padding:26px 24px;margin-top:18px;color:#fff}
+  .cs-bill-label{display:block;font-size:.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#EFC189;margin-bottom:16px}
+  .cs-bill-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  @media(max-width:600px){.cs-bill-row{grid-template-columns:1fr}}
+  .cs-bill-cell{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px}
+  .cs-bill-cell b{display:block;font-size:1.35rem;letter-spacing:-.5px;color:#fff}
+  .cs-bill-cell span{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.4;display:block;margin-top:2px}
+  .cs-bill-total{margin:16px 0 6px;font-size:1.05rem;color:rgba(255,255,255,.85)}
+  .cs-bill-total b{color:#EFC189}
+  .cs-bill-fine{margin:0;color:rgba(255,255,255,.45);font-size:.75rem;line-height:1.5;max-width:640px}
   .cs-day-times{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
   .cs-day-time{font:inherit;font-weight:700;font-size:.85rem;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
   .cs-day-time:hover{border-color:rgba(192,32,40,.4)}
@@ -382,7 +392,7 @@
   @keyframes msgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .msg.in{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
   .msg.out{align-self:flex-end;background:#FDECEA;border:1px solid rgba(192,32,40,.18);border-bottom-right-radius:4px}
-  .msg.sys{align-self:center;background:none;border:none;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 0}
+  .msg.sys{align-self:center;background:none;border:none;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 0;text-align:center}
   .msg-typing{display:flex;gap:4px;align-items:center;padding:12px 14px}
   .msg-typing span{width:6px;height:6px;border-radius:50%;background:rgba(46,13,8,.35);animation:blink 1s infinite}
   .msg-typing span:nth-child(2){animation-delay:.2s}
@@ -435,8 +445,8 @@
 
 <header class="cs-hero">
   <span class="pill">Case Study · Real Estate</span>
-  <h1>Two lead sources. One CRM. <span class="grad">The right agent first.</span></h1>
-  <p class="hero-sub">The client profile: a real estate team taking leads from a website form and WhatsApp at the same time, with a handful of agents and no shared pipeline — just phones and memory.</p>
+  <h1>Two agents pitched the same buyer. <span class="grad">Neither knew it.</span></h1>
+  <p class="hero-sub">Your leads come in through the website form and through WhatsApp. You have agents, phones, and no shared pipeline. This is the system that gives you one — so a buyer is never pitched twice and never waits for a first call that starts with “so…?”</p>
   <div class="cs-meta"><span>n8n · 51 nodes</span><span>Typeform + WhatsApp</span><span>Airtable CRM</span><span>Slack + Gmail</span><span>GPT-4.1-mini</span></div>
 </header>
 <main>
@@ -445,27 +455,37 @@
 <section id="problem" class="cs-sec">
   <div class="sec-head">
     <span class="sec-label">01 · The Problem</span>
-    <h2>Two sources. No single truth.</h2>
+    <h2>Two sources. No single truth. Buyers feel it.</h2>
   </div>
   <div class="cs-pains">
     <div class="pain">
       <div class="ico" aria-hidden="true">🔀</div>
-      <h3>“The same person, two different agents.”</h3>
-      <p>Leads arrive from the form and from WhatsApp with no shared identity. Duplicates get pitched twice — and a buyer who’s contacted twice feels it immediately.</p>
-      <span class="cost">Dupes caught: by hand, if at all</span>
+      <h3>The same buyer, two agents, two pitches.</h3>
+      <p>The form and WhatsApp don’t know each other, so the same person becomes two records and gets two calls. A buyer who’s pitched twice doesn’t call back a third time — they call the other agency.</p>
+      <span class="cost">Cost: a burned buyer, twice</span>
     </div>
     <div class="pain">
       <div class="ico" aria-hidden="true">❓</div>
-      <h3>“The first call starts with ‘so…?’”</h3>
-      <p>No budget, area, or timeline is captured up front, so every agent spends the whole first call collecting basics instead of selling.</p>
-      <span class="cost">First call: 80% logistics</span>
+      <h3>Every first call starts with “so…?”</h3>
+      <p>No budget, area, or timeline is captured up front. The agent spends the whole first call collecting basics — and by call two, the buyer is comparing you with someone who called with answers.</p>
+      <span class="cost">Cost: 80% of the first call is logistics</span>
     </div>
     <div class="pain">
       <div class="ico" aria-hidden="true">📊</div>
-      <h3>“The owner finds out last.”</h3>
-      <p>There’s no pipeline view until the month ends. By then the leak has already become a number.</p>
-      <span class="cost">Pipeline visibility: monthly, at best</span>
+      <h3>You find out about the leak at month-end.</h3>
+      <p>There’s no pipeline view until the month is over. By then, the slow weeks have already become a number, and nobody can say when it started leaking.</p>
+      <span class="cost">Cost: visibility = end of month, at best</span>
     </div>
+  </div>
+  <div class="cs-bill">
+    <span class="cs-bill-label">One missed booking a month</span>
+    <div class="cs-bill-row">
+      <div class="cs-bill-cell"><b>90L</b><span>the 3BHK the buyer walked away from</span></div>
+      <div class="cs-bill-cell"><b>2.5%</b><span>typical commission</span></div>
+      <div class="cs-bill-cell"><b>₹2.25L</b><span>gone — over logistics, not property</span></div>
+    </div>
+    <p class="cs-bill-total">The system below exists so that <b>one</b> never happens because of process.</p>
+    <p class="cs-bill-fine">Worked example, not a claim about your books. The free audit runs the same math on your actual deal flow.</p>
   </div>
 </section>
 
@@ -483,43 +503,43 @@
     <button class="cs-day-time" type="button">4:10 PM</button>
     <button class="cs-day-time" type="button">6:30 PM</button>
   </div>
-  <div class="cs-day-body" id="dayBody"></div>
+  <div class="cs-day-body" id="dayBody"><noscript><p>Enable JavaScript to explore this day.</p></noscript></div>
 </section>
 
 <!-- 03 SYSTEM -->
 <section id="system" class="cs-sec">
   <div class="sec-head">
     <span class="sec-label">03 · The System</span>
-    <h2>The machine that fixes it</h2>
-    <p class="sec-sub">Click any node to see what it does — or press play and watch a real conversation travel through the whole thing.</p>
+    <h2>The machine that stops it</h2>
+    <p class="sec-sub">Click any node to see what it does — then press play and watch a real conversation travel through the whole thing.</p>
   </div>
   <div class="cs-flow-wrap">
     <button class="cs-play" id="playBtn" type="button">&#9654; Watch a lead travel through it</button>
     <div class="cs-flow">
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📥</span><span class="n-title">Catch</span><span class="n-sub">Typeform + WhatsApp</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🪞</span><span class="n-title">Dedupe</span><span class="n-sub">Airtable</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🧠</span><span class="n-title">Extract</span><span class="n-sub">structured output</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">❓</span><span class="n-title">Complete</span><span class="n-sub">completeness check</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🎯</span><span class="n-title">Route</span><span class="n-sub">switch + code</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📣</span><span class="n-title">Brief</span><span class="n-sub">the agent gets context</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📈</span><span class="n-title">Report</span><span class="n-sub">Gmail</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📥</span><span class="n-title">Catch</span><span class="n-sub">Two doors, one pipeline</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🪞</span><span class="n-title">Dedupe</span><span class="n-sub">7-day match window</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🧠</span><span class="n-title">Extract</span><span class="n-sub">GPT-4.1-mini, with a job description</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">❓</span><span class="n-title">Complete</span><span class="n-sub">Asks for exactly one thing</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🎯</span><span class="n-title">Route</span><span class="n-sub">By area, then round-robin</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📣</span><span class="n-title">Brief</span><span class="n-sub">The agent calls with answers</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📈</span><span class="n-title">Report</span><span class="n-sub">Monday, 9am, no asking</span></button>
     </div>
   </div>
-  <div class="cs-flow-detail" id="flowDetail" aria-live="polite"></div>
+  <div class="cs-flow-detail" id="flowDetail" aria-live="polite"><noscript><p>Enable JavaScript to explore each step of the system.</p></noscript></div>
   <div class="cs-sim" style="margin-top:20px">
     <div class="cs-phone" aria-label="Simulated WhatsApp conversation">
       <div class="cs-phone-head"><span class="avatar" aria-hidden="true">💬</span><span>Customer<small>WhatsApp · automated replies</small></span></div>
-      <div class="cs-chat" id="chat"></div>
+      <div class="cs-chat" id="chat"><noscript><p>Enable JavaScript to watch the conversation play out.</p></noscript></div>
     </div>
     <div class="cs-caps">
       <h3>Under the surface</h3>
       <p>The same conversation, narrated by the system.</p>
-      <p class="cs-stepcap" data-i="0"><b>1.</b>Form and WhatsApp now feed one pipeline — same shape, same rules.</p>
-      <p class="cs-stepcap" data-i="1"><b>2.</b>Seven-day match window: the second enquiry from the same number is a flag, not a new lead.</p>
-      <p class="cs-stepcap" data-i="2"><b>3.</b>GPT-4.1-mini extracts name, area, budget, timeline — through a parser it can’t talk its way out of.</p>
-      <p class="cs-stepcap" data-i="3"><b>4.</b>Completeness check found the gap and asked for exactly one thing.</p>
-      <p class="cs-stepcap" data-i="4"><b>5.</b>Routed by area → round-robin → agent Anjali. Right agent, first time.</p>
-      <p class="cs-stepcap" data-i="5"><b>6.</b>The owner’s Monday email: the whole pipeline, before the first coffee.</p>
+      <p class="cs-stepcap" data-i="0"><b>1.</b>Both doors, one pipeline — same shape, same rules.</p>
+      <p class="cs-stepcap" data-i="1"><b>2.</b>7-day window: the second enquiry is a flag, not a new lead.</p>
+      <p class="cs-stepcap" data-i="2"><b>3.</b>GPT-4.1-mini extracts name, area, budget, timeline — through a parser it can’t bluff.</p>
+      <p class="cs-stepcap" data-i="3"><b>4.</b>Completeness check found the gap — and asked for exactly one thing.</p>
+      <p class="cs-stepcap" data-i="4"><b>5.</b>Routed by area → round-robin → Anjali. Right agent, first time.</p>
+      <p class="cs-stepcap" data-i="5"><b>6.</b>Owner’s Monday email: the whole pipeline, before the first coffee.</p>
     </div>
   </div>
 </section>
@@ -535,12 +555,12 @@
     <tbody>
       <tr><td class="metric">Duplicate leads</td><td class="before">found by hand, if at all</td><td class="after">Caught automatically — <span class="count" data-to="7" data-suffix="-day">7-day</span> match window</td></tr>
       <tr><td class="metric">Info complete before first call</td><td class="before">~20%</td><td class="after"><span class="count" data-to="100" data-suffix="%">100%</span></td></tr>
-      <tr><td class="metric">First call spent on logistics</td><td class="before">80%</td><td class="after">0% — brief arrives in advance</td></tr>
+      <tr><td class="metric">First call spent on logistics</td><td class="before">80%</td><td class="after">0% — the brief arrives in advance</td></tr>
+      <tr><td class="metric">Evening lead response</td><td class="before">next morning</td><td class="after"><span class="count" data-to="60" data-prefix="&lt;">&lt;60</span> seconds</td></tr>
       <tr><td class="metric">Pipeline visibility</td><td class="before">end of month</td><td class="after">Every Monday, 9am</td></tr>
-      <tr><td class="metric">Response to evening leads</td><td class="before">next morning</td><td class="after"><span class="count" data-to="60" data-prefix="&lt;">&lt;60</span> seconds</td></tr>
     </tbody>
   </table>
-  <p class="cs-fine">Built from a live n8n lead-routing flow and extended — the same pipeline runs the Typeform and WhatsApp lanes side by side. Figures describe how the system behaves, not a promise of identical results.</p>
+  <p class="cs-fine">Built from a live n8n lead-routing flow and extended — the same pipeline runs the Typeform and WhatsApp lanes side by side. The commission example is a worked illustration; your audit runs the same math on your actual deal flow.</p>
 </section>
 
 <!-- 05 UNDER THE HOOD -->
@@ -553,16 +573,16 @@
     <div class="hood"><h3>7-day dedupe window</h3><p>A buyer who re-appears six days later is still the same lead. The window is a setting, not a hope.</p></div>
     <div class="hood"><h3>Round-robin fairness</h3><p>Assignment is code, not the manager’s mood. Every agent gets an even share of the pipeline.</p></div>
     <div class="hood"><h3>LLM with a job description</h3><p>GPT-4.1-mini extracts through a structured-output parser — the model can’t improvise the schema.</p></div>
-    <div class="hood"><h3>Slack + Gmail belt-and-braces</h3><p>The agent brief lands in two channels. One going quiet never loses a lead.</p></div>
+    <div class="hood"><h3>Slack + Gmail, belt-and-braces</h3><p>The agent brief lands in two channels. One going quiet never loses a lead.</p></div>
     <div class="hood"><h3>Routing by property type</h3><p>Luxury and rental leads take different lanes — different pitch, different agent.</p></div>
-    <div class="hood"><h3>Reporting on a schedule</h3><p>A trigger, an aggregate, an email. The owner’s pipeline view costs zero human minutes.</p></div>
+    <div class="hood"><h3>Reporting on a schedule</h3><p>A trigger, an aggregate, an email. The pipeline view costs zero human minutes.</p></div>
   </div>
 </section>
 <section id="cta" class="cs-sec">
   <div class="follow-card">
     <span class="sec-label">Next</span>
-    <h2>Want this on your business?</h2>
-    <p>Every build starts with a free 20-minute audit — no pitch deck. Just an honest look at where your business is leaking time and leads, and what's worth automating first.</p>
+    <h2>Your buyers are already walking in two doors.</h2>
+    <p>The free 20-minute audit maps your lead sources, finds exactly where they leak, and shows you the routing — before you spend a rupee on building it.</p>
     <a class="btn btn-accent" href="https://form.typeform.com/to/JVZF84PA" target="_blank" rel="noopener">Get your free automation audit &rarr;</a>
     <a class="cs-home" href="..">&larr; All case studies</a>
   </div>
@@ -574,96 +594,169 @@
 <script>
 
 (() => {
-  const D = {"day": [["10:05 AM", "A form submission \u2014 and nine minutes later, a WhatsApp enquiry. Same buyer, two records.", "The CRM has no idea they\u2019re the same person."], ["11:20 AM", "Agent A starts calling from the form data \u2014 no budget on it.", "Agent B is about to pitch the exact same buyer."], ["1:40 PM", "Buyer asks on WhatsApp: \u201cwhat\u2019s the price range for 3BHK?\u201d", "No agent has budget data to answer with."], ["4:10 PM", "Owner asks \u201chow were leads this week?\u201d", "Answer: \u201clet me check my phone\u201d \u2014 a 20-minute manual count."], ["6:30 PM", "An evening WhatsApp lead comes in.", "First touch: tomorrow morning. Same day: gone."]], "flow": [["\ud83d\udce5", "Catch", "Two triggers, one pipeline", "Typeform + WhatsApp", "The website form and WhatsApp feed one pipeline. Each lead is normalised into the same shape, whatever door it came in through \u2014 so nothing downstream cares where it started."], ["\ud83e\ude9e", "Dedupe", "7-day match window", "Airtable", "Every lead is matched against the CRM over a 7-day window. Duplicates get flagged and merged: one record, full history, no second pitch to the same buyer."], ["\ud83e\udde0", "Extract", "GPT-4.1-mini with a job description", "structured output", "The model pulls structure out of messy human language \u2014 name, area, budget, property type, timeline, phone \u2014 through a structured-output parser. It can\u2019t free-style the schema."], ["\u2753", "Complete", "Ask for exactly what\u2019s missing", "completeness check", "An info-completeness check looks at the record. If budget or area is missing, a friendly WhatsApp asks for exactly that \u2014 nothing more, nothing less."], ["\ud83c\udfaf", "Route", "By area, then round-robin", "switch + code", "A switch routes by location and property type; a round-robin assigns the agent. Right area, even load, no favouritism \u2014 it\u2019s code, not the manager\u2019s mood."], ["\ud83d\udce3", "Brief", "Slack + Gmail belt-and-braces", "the agent gets context", "The assigned agent gets the full brief on Slack, with a Gmail backup. They call with context in hand \u2014 area, budget, timeline \u2014 not a blank slate."], ["\ud83d\udcc8", "Report", "Monday 9am, on schedule", "Gmail", "A schedule trigger aggregates the CRM and emails the owner every Monday: new leads, duplicates caught, conversations, bookings. Nobody has to ask \u201chow are leads?\u201d"]], "sim": [{"sys": "TYPEFORM \u2014 10:05 AM", "node": 0, "who": "customer", "text": "3BHK in Kochi, budget 90L. \u2014 Ramesh", "cap": 0}, {"sys": "WHATSAPP \u2014 10:14 AM", "node": 1, "who": "customer", "text": "Hi, saw your ad for the 3BHK in Kochi, 90L max \u2014 Ramesh", "cap": 1}, {"node": 2, "who": "system", "text": "Hi Ramesh \u2014 you also filled our site form a moment ago, so I\u2019ll keep it all in one place \ud83d\ude4c To shortlist properly: what\u2019s your move-in timeline?", "cap": 2}, {"node": 3, "who": "customer", "text": "3 to 6 months", "cap": 3}, {"node": 4, "who": "system", "text": "Perfect. I\u2019ve passed your brief to Anjali \u2014 our Kochi agent. She\u2019ll call today with three matching options.", "cap": 4}, {"sys": "SLACK \u2014 10:17 AM", "node": 5, "who": "system", "text": "NEW LEAD \u00b7 Ramesh \u00b7 3BHK Kochi \u00b7 90L \u00b7 3\u20136 months \u00b7 form + WhatsApp \u00b7 assigned: Anjali (round 2)"}, {"sys": "EMAIL \u2014 MONDAY 9:00 AM", "node": 6, "who": "system", "text": "Weekly pipeline: 14 new leads \u00b7 3 duplicates caught \u00b7 9 conversations \u00b7 2 site visits booked", "cap": 5}]};
-  const prog = document.getElementById('progress');
-  if (prog) addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const max = h.scrollHeight - h.clientHeight;
-    prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-  }, { passive: true });
+  try {
+    const D = {"day": [{"time": "10:05 AM", "happened": "A form submission. Nine minutes later, a WhatsApp enquiry. Same buyer, two records.", "lost": "The CRM has no idea they\u2019re the same person."}, {"time": "11:20 AM", "happened": "Agent A calls from the form data \u2014 there\u2019s no budget on it.", "lost": "Agent B is about to pitch the exact same buyer."}, {"time": "1:40 PM", "happened": "On WhatsApp: \u201cwhat\u2019s the price range for 3BHK?\u201d", "lost": "No agent has budget data to answer with."}, {"time": "4:10 PM", "happened": "\u201cHow were leads this week?\u201d", "lost": "\u201cLet me check my phone\u201d \u2014 a 20-minute manual count."}, {"time": "6:30 PM", "happened": "An evening WhatsApp lead comes in.", "lost": "First touch: tomorrow morning. Same day: gone."}], "flow": [{"ico": "\ud83d\udce5", "title": "Catch", "sub": "Two doors, one pipeline", "what": "Typeform and WhatsApp feed one pipeline. Every lead is normalised into the same shape \u2014 so nothing downstream cares which door it came through."}, {"ico": "\ud83e\ude9e", "title": "Dedupe", "sub": "7-day match window", "what": "Every lead is matched against the CRM over 7 days. The second enquiry from the same number is a flag and a merge \u2014 one record, full history, no second pitch."}, {"ico": "\ud83e\udde0", "title": "Extract", "sub": "GPT-4.1-mini, with a job description", "what": "The model pulls name, area, budget, property type, timeline, and phone out of messy human language \u2014 through a structured parser it can\u2019t talk its way out of."}, {"ico": "\u2753", "title": "Complete", "sub": "Asks for exactly one thing", "what": "The completeness check sees what\u2019s missing and asks for exactly that \u2014 nothing more. A follow-up that feels helpful, not like a form."}, {"ico": "\ud83c\udfaf", "title": "Route", "sub": "By area, then round-robin", "what": "A switch routes by location and property type; a round-robin assigns the agent. Right area, even load, no favourites \u2014 it\u2019s code, not the manager\u2019s mood."}, {"ico": "\ud83d\udce3", "title": "Brief", "sub": "The agent calls with answers", "what": "The full brief lands on Slack, with a Gmail backup. Area, budget, timeline \u2014 in hand before the first hello."}, {"ico": "\ud83d\udcc8", "title": "Report", "sub": "Monday, 9am, no asking", "what": "A schedule trigger aggregates the CRM and emails the owner: new leads, duplicates caught, conversations, bookings. Nobody ever asks \u201chow are leads?\u201d again."}], "sim": [{"sys": "TYPEFORM \u2014 10:05 AM", "node": 0, "who": "customer", "text": "3BHK in Kochi, budget 90L. \u2014 Ramesh", "cap": 0}, {"sys": "WHATSAPP \u2014 10:14 AM", "node": 1, "who": "customer", "text": "Hi, saw your ad for the 3BHK in Kochi, 90L max \u2014 Ramesh", "cap": 1}, {"node": 2, "who": "system", "text": "Hi Ramesh \u2014 you also filled our site form a moment ago, so everything stays in one place \ud83d\ude4c To shortlist properly: what\u2019s your move-in timeline?", "cap": 2}, {"node": 3, "who": "customer", "text": "3 to 6 months", "cap": 3}, {"node": 4, "who": "system", "text": "Perfect. I\u2019ve passed your brief to Anjali \u2014 our Kochi agent. She\u2019ll call today with three matching options.", "cap": 4}, {"sys": "SLACK \u2014 10:17 AM", "node": 5, "who": "system", "text": "NEW LEAD \u00b7 Ramesh \u00b7 3BHK Kochi \u00b7 90L \u00b7 3\u20136 months \u00b7 form + WhatsApp \u00b7 assigned: Anjali (round 2)"}, {"sys": "EMAIL \u2014 MONDAY 9:00 AM", "node": 6, "who": "system", "text": "Weekly pipeline: 14 new leads \u00b7 3 duplicates caught \u00b7 9 conversations \u00b7 2 site visits booked", "cap": 5}]} || {};
+    // Never let a bad value reach the DOM.
+    const txt = v => (v === undefined || v === null) ? '' : String(v);
+    // Accept object data; fall back to positional arrays (legacy shape).
+    const normDay = m => Array.isArray(m) ? { time: m[0], happened: m[1], lost: m[2] } : (m || {});
+    const normFlow = n => Array.isArray(n) ? { ico: n[0], title: n[1], sub: n[3], what: n[4] } : (n || {});
 
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
-  }), { threshold: 0.12 });
-  document.querySelectorAll('.cs-sec').forEach(el => io.observe(el));
+    const prog = document.getElementById('progress');
+    if (prog) addEventListener('scroll', () => {
+      const h = document.documentElement;
+      if (!h) return;
+      const max = h.scrollHeight - h.clientHeight;
+      prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    }, { passive: true });
 
-  if (D.day) {
-    const body = document.getElementById('dayBody');
-    const setDay = i => {
-      document.querySelectorAll('.cs-day-time').forEach((b, j) => b.classList.toggle('active', j === i));
-      const m = D.day[i];
-      body.innerHTML = '<div class="cs-day-time-big">' + m.time + '</div><div><p>' + m.happened + '</p><p class="cs-lost"><span>Lost</span>' + m.lost + '</p></div>';
-    };
-    document.querySelectorAll('.cs-day-time').forEach((b, j) => b.addEventListener('click', () => setDay(j)));
-    setDay(0);
-  }
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.cs-sec').forEach(el => io.observe(el));
 
-  if (D.flow) {
-    const nodes = [...document.querySelectorAll('.cs-node')];
-    const detail = document.getElementById('flowDetail');
-    const showNode = i => {
-      nodes.forEach((n, j) => n.classList.toggle('active', j === i));
-      const n = D.flow[i];
-      detail.innerHTML = '<div class="cs-fd-top"><span class="cs-fd-ico">' + n.ico + '</span><div><h3>' + n.title + '</h3><p class="cs-fd-sub">' + n.sub + '</p></div></div><p>' + n.what + '</p>';
-    };
-    let chatBusy = false;
-    nodes.forEach((n, i) => n.addEventListener('click', () => { if (!chatBusy) showNode(i); }));
-    showNode(0);
-
-    const chat = document.getElementById('chat');
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    const scrollChat = () => { chat.scrollTop = chat.scrollHeight; };
-    const addMsg = (cls, text) => {
-      const d = document.createElement('div');
-      d.className = 'msg ' + cls; d.textContent = text;
-      chat.appendChild(d); scrollChat();
-    };
-    const typing = cls => {
-      const d = document.createElement('div');
-      d.className = 'msg ' + cls + ' msg-typing';
-      d.innerHTML = '<span></span><span></span><span></span>';
-      chat.appendChild(d); scrollChat();
-      return d;
-    };
-    const btn = document.getElementById('playBtn');
-    btn.addEventListener('click', async () => {
-      if (chatBusy) return;
-      chatBusy = true;
-      btn.classList.add('playing'); btn.textContent = '\u23F3 Watching\u2026';
-      chat.innerHTML = '';
-      document.querySelectorAll('.cs-stepcap').forEach(c => c.classList.remove('on'));
-      for (const s of D.sim) {
-        if (s.node !== undefined) showNode(s.node);
-        if (s.cap !== undefined) {
-          const c = document.querySelector('.cs-stepcap[data-i="' + s.cap + '"]');
-          if (c) c.classList.add('on');
+    // ---------- 02 day timeline ----------
+    if (D.day && D.day.length) {
+      const body = document.getElementById('dayBody');
+      const setDay = i => {
+        const m = normDay(D.day[i]);
+        document.querySelectorAll('.cs-day-time').forEach((b, j) => b.classList.toggle('active', j === i));
+        if (!body) return;
+        if (!m.time && !m.happened && !m.lost) {
+          body.innerHTML = '<p>Nothing to show for this moment yet.</p>';
+          return;
         }
-        if (s.sys) { addMsg('sys', s.sys); await sleep(1000); }
-        const cls = s.who === 'customer' ? 'in' : 'out';
-        const t = typing(cls);
-        await sleep(s.who === 'customer' ? 900 : 1300);
-        t.remove();
-        addMsg(cls, s.text);
-        await sleep(1500);
-      }
-      chatBusy = false;
-      btn.classList.remove('playing'); btn.textContent = '\u25B6 Replay the journey';
-    });
-  }
+        body.innerHTML =
+          '<div class="cs-day-time-big">' + txt(m.time) + '</div>' +
+          '<div><p>' + txt(m.happened) + '</p>' +
+          '<p class="cs-lost"><span>Cost</span>' + txt(m.lost) + '</p></div>';
+      };
+      document.querySelectorAll('.cs-day-time').forEach((b, j) => b.addEventListener('click', () => setDay(j)));
+      setDay(0);
+    }
 
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    cio.unobserve(e.target);
-    const el = e.target, to = +el.dataset.to, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
-    const t0 = performance.now(), dur = 1200;
-    const tick = t => {
-      const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = pre + Math.round(to * ease) + suf;
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }), { threshold: 0.5 });
-  document.querySelectorAll('.count').forEach(el => cio.observe(el));
+    // ---------- 03 system flow + chat simulation ----------
+    if (D.flow && D.flow.length) {
+      const nodes = [...document.querySelectorAll('.cs-node')];
+      const detail = document.getElementById('flowDetail');
+      const showNode = i => {
+        const n = normFlow(D.flow[i]);
+        nodes.forEach((nd, j) => nd.classList.toggle('active', j === i));
+        if (!detail) return;
+        if (!n.title && !n.what) {
+          detail.innerHTML = '<p>Details for this step are coming soon.</p>';
+          return;
+        }
+        detail.innerHTML =
+          '<div class="cs-fd-top"><span class="cs-fd-ico">' + txt(n.ico) + '</span>' +
+          '<div><h3>' + txt(n.title) + '</h3><p class="cs-fd-sub">' + txt(n.sub) + '</p></div></div>' +
+          '<p>' + txt(n.what) + '</p>';
+      };
+      let chatBusy = false;
+      nodes.forEach((n, i) => n.addEventListener('click', () => { if (!chatBusy) showNode(i); }));
+      showNode(0);
+
+      const chat = document.getElementById('chat');
+      const btn = document.getElementById('playBtn');
+      const caps = [...document.querySelectorAll('.cs-stepcap')];
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+      const scrollChat = () => { if (chat) chat.scrollTop = chat.scrollHeight; };
+      const addMsg = (cls, text) => {
+        if (!chat) return;
+        const d = document.createElement('div');
+        d.className = 'msg ' + cls;
+        d.textContent = txt(text);
+        chat.appendChild(d);
+        scrollChat();
+      };
+      const typing = cls => {
+        if (!chat) return null;
+        const d = document.createElement('div');
+        d.className = 'msg ' + cls + ' msg-typing';
+        d.innerHTML = '<span></span><span></span><span></span>';
+        chat.appendChild(d);
+        scrollChat();
+        return d;
+      };
+
+      const play = async () => {
+        if (chatBusy) return;
+        chatBusy = true;
+        if (btn) { btn.classList.add('playing'); btn.textContent = '\u23F3 Watching\u2026'; }
+        if (chat) chat.innerHTML = '';
+        caps.forEach(c => c.classList.remove('on'));
+        try {
+          for (const s of D.sim || []) {
+            if (!s) continue;
+            if (s.node !== undefined) showNode(s.node);
+            if (s.cap !== undefined) {
+              const c = document.querySelector('.cs-stepcap[data-i="' + s.cap + '"]');
+              if (c) c.classList.add('on');
+            }
+            if (s.sys) { addMsg('sys', s.sys); await sleep(900); }
+            if (s.text) {
+              const cls = s.who === 'customer' ? 'in' : 'out';
+              const t = typing(cls);
+              await sleep(s.who === 'customer' ? 900 : 1300);
+              if (t) t.remove();
+              addMsg(cls, s.text);
+              await sleep(1500);
+            }
+          }
+        } catch (err) {
+          // A broken step never leaves the phone half-frozen.
+        } finally {
+          chatBusy = false;
+          if (btn) { btn.classList.remove('playing'); btn.textContent = '\u25B6 Replay the journey'; }
+        }
+      };
+
+      if (btn) btn.addEventListener('click', () => { play(); });
+
+      // The phone is never empty: a hint before the first play.
+      if (chat && D.sim && D.sim.length) {
+        const hint = document.createElement('div');
+        hint.className = 'msg sys';
+        hint.textContent = 'Press \u25B6 \u2014 or just scroll here \u2014 and watch the whole thing play out';
+        chat.appendChild(hint);
+      }
+
+      // Auto-play once, when the simulation scrolls into view.
+      const simEl = document.querySelector('.cs-sim');
+      if (simEl && typeof IntersectionObserver !== 'undefined') {
+        const sio = new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) { sio.unobserve(simEl); if (!chatBusy) play(); }
+        }), { threshold: 0.35 });
+        sio.observe(simEl);
+      }
+    }
+
+    // ---------- counters ----------
+    const cio = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      const el = e.target;
+      const to = +el.dataset.to;
+      if (!isFinite(to)) return;
+      const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+      const t0 = performance.now(), dur = 1200;
+      const tick = t => {
+        const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + Math.round(to * ease) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.5 });
+    document.querySelectorAll('.count').forEach(el => cio.observe(el));
+  } catch (err) {
+    // If anything unexpected breaks, say so — never show "undefined".
+    try {
+      const b = document.createElement('div');
+      b.style.cssText = 'max-width:720px;margin:16px auto;padding:14px 18px;border:1px solid #C02028;border-radius:12px;background:#FDECEA;color:#8E1218;font:14px/1.5 sans-serif';
+      b.textContent = 'Some interactive parts could not load. The rest of the page still works — nothing you need is lost.';
+      if (document.body) document.body.insertBefore(b, document.body.firstChild.nextSibling);
+    } catch (e2) { /* last resort: stay silent */ }
+  }
 })();
 
 </script>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dental Clinic — Booking & Recall · Case Study · Alomato</title>
-<meta name="description" content="A 24/7 WhatsApp booking assistant that reads the doctor’s real calendar, sends one-tap reminders, recovers no-shows, and runs the 6-month recall list — a design build for clinics.">
+<meta name="description" content="1 in 4 chairs sits empty. A 24/7 WhatsApp booking system on the real calendar — one-tap reminders, no-show recovery, personal recalls, and the owner’s Monday report. A design build for clinics.">
 <link rel="icon" href="../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
 <link rel="apple-touch-icon" href="../favicons/apple-touch-icon.png">
@@ -326,19 +326,29 @@
   @media(max-width:560px){.cs-crumb{display:none}}
   .cs-cta{white-space:nowrap}
   .cs-hero{max-width:1080px;margin:0 auto;padding:64px 6vw 8px}
-  .cs-hero h1{max-width:22ch}
+  .cs-hero h1{max-width:24ch}
   .cs-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .cs-meta span{font-size:.78rem;font-weight:600;color:var(--accent-deep);background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
   .cs-sec{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .cs-sec.on{opacity:1;transform:none}
-  .cs-sec .sec-head h2{max-width:26ch}
+  .cs-sec .sec-head h2{max-width:28ch}
   .cs-pains{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
   @media(max-width:860px){.cs-pains{grid-template-columns:1fr}}
   .pain{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px}
   .pain .ico{width:44px;height:44px;font-size:1.4rem;display:grid;place-items:center;border-radius:12px;background:rgba(192,32,40,.08)}
   .pain h3{font-size:1.02rem;line-height:1.35}
   .pain p{color:var(--muted);font-size:.9rem;line-height:1.55}
-  .pain .cost{margin-top:auto;font-size:.78rem;font-weight:700;color:var(--accent-deep);background:rgba(192,32,40,.08);border:1px dashed rgba(192,32,40,.3);padding:7px 12px;border-radius:10px;align-self:flex-start}
+  .pain .cost{margin-top:auto;font-size:.78rem;font-weight:700;color:#fff;background:var(--accent);padding:7px 12px;border-radius:10px;align-self:flex-start}
+  .cs-bill{background:var(--ink);border-radius:var(--radius);padding:26px 24px;margin-top:18px;color:#fff}
+  .cs-bill-label{display:block;font-size:.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#EFC189;margin-bottom:16px}
+  .cs-bill-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  @media(max-width:600px){.cs-bill-row{grid-template-columns:1fr}}
+  .cs-bill-cell{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px}
+  .cs-bill-cell b{display:block;font-size:1.35rem;letter-spacing:-.5px;color:#fff}
+  .cs-bill-cell span{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.4;display:block;margin-top:2px}
+  .cs-bill-total{margin:16px 0 6px;font-size:1.05rem;color:rgba(255,255,255,.85)}
+  .cs-bill-total b{color:#EFC189}
+  .cs-bill-fine{margin:0;color:rgba(255,255,255,.45);font-size:.75rem;line-height:1.5;max-width:640px}
   .cs-day-times{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
   .cs-day-time{font:inherit;font-weight:700;font-size:.85rem;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
   .cs-day-time:hover{border-color:rgba(192,32,40,.4)}
@@ -382,7 +392,7 @@
   @keyframes msgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .msg.in{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
   .msg.out{align-self:flex-end;background:#FDECEA;border:1px solid rgba(192,32,40,.18);border-bottom-right-radius:4px}
-  .msg.sys{align-self:center;background:none;border:none;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 0}
+  .msg.sys{align-self:center;background:none;border:none;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 0;text-align:center}
   .msg-typing{display:flex;gap:4px;align-items:center;padding:12px 14px}
   .msg-typing span{width:6px;height:6px;border-radius:50%;background:rgba(46,13,8,.35);animation:blink 1s infinite}
   .msg-typing span:nth-child(2){animation-delay:.2s}
@@ -435,8 +445,8 @@
 
 <header class="cs-hero">
   <span class="pill">Case Study · Dental Clinic</span>
-  <h1>No more no-shows. No more <span class="grad">“was it Tuesday?”</span> reminders.</h1>
-  <p class="hero-sub">The client profile: a 2-doctor dental clinic with one front desk, a booking phone that rings while the doctor is in the chair, and a recall list that lives in someone’s head. This is the system I’d build for that exact setup.</p>
+  <h1>The appointment was paid for. <span class="grad">The patient never came.</span></h1>
+  <p class="hero-sub">One front desk, a booking phone that rings while the doctor is in the chair, and a recall list that lives in someone’s head. This is the system I’d build for a 2-doctor clinic that runs exactly like that.</p>
   <div class="cs-meta"><span>n8n</span><span>WhatsApp Cloud API</span><span>Google Calendar</span><span>AI booking assistant</span><span>Design build</span></div>
 </header>
 <main>
@@ -450,22 +460,32 @@
   <div class="cs-pains">
     <div class="pain">
       <div class="ico" aria-hidden="true">📞</div>
-      <h3>“The phone rings while the doctor is in the chair.”</h3>
-      <p>Calls hit voicemail or get handled thirty minutes late. Evening enquiries don’t just wait — they vanish.</p>
-      <span class="cost">Evening enquiries: up to 40% missed</span>
+      <h3>The phone rings. The doctor is in the chair.</h3>
+      <p>Calls hit voicemail or wait thirty minutes. Evening enquiries don’t just wait — they vanish, because another clinic’s front desk is awake.</p>
+      <span class="cost">Cost: up to 40% of evening enquiries, missed</span>
     </div>
     <div class="pain">
       <div class="ico" aria-hidden="true">🪑</div>
-      <h3>“Every empty chair is a lost day.”</h3>
-      <p>One in four appointments turns into a no-show. A Friday-afternoon no-show isn’t a statistic — it’s a day of revenue gone.</p>
-      <span class="cost">No-shows: 1 in 4</span>
+      <h3>The slot was sold. The chair stayed empty.</h3>
+      <p>One in four appointments ends in a no-show. A no-show isn’t a statistic — it’s 40 minutes of a paid-for slot, gone, with no reminder ever sent.</p>
+      <span class="cost">Cost: 1 in 4 appointments</span>
     </div>
     <div class="pain">
       <div class="ico" aria-hidden="true">🗓️</div>
-      <h3>“The recall list lives in a head.”</h3>
-      <p>Cleanings due, follow-ups, second opinions — nobody tracks them, so most patients simply never come back.</p>
-      <span class="cost">Recalls: ad-hoc, at best</span>
+      <h3>“Come back in six months.” — and nobody writes it down.</h3>
+      <p>Cleanings due, follow-ups, second opinions — they live in a head. Most patients don’t come back, because nobody ever told them to.</p>
+      <span class="cost">Cost: the recall list is a memory</span>
     </div>
+  </div>
+  <div class="cs-bill">
+    <span class="cs-bill-label">One clinic week, no system</span>
+    <div class="cs-bill-row">
+      <div class="cs-bill-cell"><b>25</b><span>chairs a day, booked and paid for</span></div>
+      <div class="cs-bill-cell"><b>25%</b><span>of them end in a no-show</span></div>
+      <div class="cs-bill-cell"><b>6</b><span>empty appointments a week</span></div>
+    </div>
+    <p class="cs-bill-total">At ₹2,000 average per visit, that’s ~<b>₹3L a month</b> sitting in empty chairs.</p>
+    <p class="cs-bill-fine">Worked example from typical clinic numbers, not a claim about your books. The free audit runs the real ones.</p>
   </div>
 </section>
 
@@ -483,42 +503,42 @@
     <button class="cs-day-time" type="button">6:15 PM</button>
     <button class="cs-day-time" type="button">8:00 PM</button>
   </div>
-  <div class="cs-day-body" id="dayBody"></div>
+  <div class="cs-day-body" id="dayBody"><noscript><p>Enable JavaScript to explore this day.</p></noscript></div>
 </section>
 
 <!-- 03 SYSTEM -->
 <section id="system" class="cs-sec">
   <div class="sec-head">
     <span class="sec-label">03 · The System</span>
-    <h2>The machine that fixes it</h2>
-    <p class="sec-sub">Click any node to see what it does — or press play and watch a real conversation travel through the whole thing.</p>
+    <h2>The machine that stops it</h2>
+    <p class="sec-sub">Click any node to see what it does — then press play and watch a real conversation travel through the whole thing.</p>
   </div>
   <div class="cs-flow-wrap">
     <button class="cs-play" id="playBtn" type="button">&#9654; Watch a lead travel through it</button>
     <div class="cs-flow">
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📥</span><span class="n-title">Catch</span><span class="n-sub">AI assistant</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🗓️</span><span class="n-title">Book</span><span class="n-sub">Google Calendar</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🔔</span><span class="n-title">Remind</span><span class="n-sub">mini-conversations</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🪑</span><span class="n-title">Recover</span><span class="n-sub">auto rebooking</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🧾</span><span class="n-title">Onboard</span><span class="n-sub">new patients</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🔁</span><span class="n-title">Recall</span><span class="n-sub">6-month cycle</span></button>
-      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📈</span><span class="n-title">Report</span><span class="n-sub">owner’s Monday email</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📥</span><span class="n-title">Catch</span><span class="n-sub">One number, 24/7</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🗓️</span><span class="n-title">Book</span><span class="n-sub">Reads the real calendar</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🔔</span><span class="n-title">Remind</span><span class="n-sub">24h + 2h, one tap</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🪑</span><span class="n-title">Recover</span><span class="n-sub">No-shows, caught</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🧾</span><span class="n-title">Onboard</span><span class="n-sub">Forms before the visit</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">🔁</span><span class="n-title">Recall</span><span class="n-sub">Every Monday, one by one</span></button>
+      <button class="cs-node" type="button"><span class="n-ico" aria-hidden="true">📈</span><span class="n-title">Report</span><span class="n-sub">The clinic at a glance</span></button>
     </div>
   </div>
-  <div class="cs-flow-detail" id="flowDetail" aria-live="polite"></div>
+  <div class="cs-flow-detail" id="flowDetail" aria-live="polite"><noscript><p>Enable JavaScript to explore each step of the system.</p></noscript></div>
   <div class="cs-sim" style="margin-top:20px">
     <div class="cs-phone" aria-label="Simulated WhatsApp conversation">
       <div class="cs-phone-head"><span class="avatar" aria-hidden="true">💬</span><span>Customer<small>WhatsApp · automated replies</small></span></div>
-      <div class="cs-chat" id="chat"></div>
+      <div class="cs-chat" id="chat"><noscript><p>Enable JavaScript to watch the conversation play out.</p></noscript></div>
     </div>
     <div class="cs-caps">
       <h3>Under the surface</h3>
       <p>The same conversation, narrated by the system.</p>
-      <p class="cs-stepcap" data-i="0"><b>1.</b>Answered at 6:15pm in closed hours — from the real calendar.</p>
+      <p class="cs-stepcap" data-i="0"><b>1.</b>Answered at 6:15 PM in closed hours — from the real calendar.</p>
       <p class="cs-stepcap" data-i="1"><b>2.</b>Only free slots offered. Confirmed with a calendar invite.</p>
-      <p class="cs-stepcap" data-i="2"><b>3.</b>Reminders are conversations — confirm or move, one tap.</p>
-      <p class="cs-stepcap" data-i="3"><b>4.</b>A slot passed without confirmation — the recovery lane wakes up within the hour.</p>
-      <p class="cs-stepcap" data-i="4"><b>5.</b>Recall is personal: one patient, one real slot, sent on schedule.</p>
+      <p class="cs-stepcap" data-i="2"><b>3.</b>A reminder is a conversation — confirm or move, one tap.</p>
+      <p class="cs-stepcap" data-i="3"><b>4.</b>The slot passed without a confirmation — recovery lane wakes within the hour.</p>
+      <p class="cs-stepcap" data-i="4"><b>5.</b>Recall is personal: one patient, one real slot, on schedule.</p>
     </div>
   </div>
 </section>
@@ -532,14 +552,14 @@
   <table class="cs-results">
     <thead><tr><th>Metric</th><th>Before</th><th>After</th></tr></thead>
     <tbody>
-      <tr><td class="metric">Evening enquiry response</td><td class="before">next morning</td><td class="after"><span class="count" data-to="60" data-prefix="&lt;">&lt;60</span> seconds, 24/7</td></tr>
+      <tr><td class="metric">Evening enquiry response</td><td class="before">next morning</td><td class="after"><span class="count" data-to="60" data-prefix="&lt;">&lt;60</span> seconds — 24/7</td></tr>
       <tr><td class="metric">No-shows</td><td class="before">1 in 4</td><td class="after">Target: under 1 in 10</td></tr>
-      <tr><td class="metric">Front desk answering booking calls</td><td class="before">all day, all hours</td><td class="after">0 routine calls</td></tr>
+      <tr><td class="metric">Front desk booking calls</td><td class="before">all day, all hours</td><td class="after">0 routine calls</td></tr>
       <tr><td class="metric">Recalls sent</td><td class="before">whoever remembers</td><td class="after">Every patient, every cycle</td></tr>
       <tr><td class="metric">New-patient history</td><td class="before">paper form, in the room</td><td class="after">Complete before arrival</td></tr>
     </tbody>
   </table>
-  <p class="cs-fine">This is a design build — the architecture I’d ship for a clinic, modelled on the two production systems above. Want it for real? That’s what the free audit is for.</p>
+  <p class="cs-fine">This is a design build — the architecture I’d ship for a clinic, modelled on the two production systems above. The numbers are worked examples; your audit runs the real ones.</p>
 </section>
 
 <!-- 05 UNDER THE HOOD -->
@@ -560,8 +580,8 @@
 <section id="cta" class="cs-sec">
   <div class="follow-card">
     <span class="sec-label">Next</span>
-    <h2>Want this on your business?</h2>
-    <p>Every build starts with a free 20-minute audit — no pitch deck. Just an honest look at where your business is leaking time and leads, and what's worth automating first.</p>
+    <h2>Your chairs are already paid for.</h2>
+    <p>The free 20-minute audit maps where your clinic leaks — calls, no-shows, recalls — and shows you what the system would catch first. No pitch deck.</p>
     <a class="btn btn-accent" href="https://form.typeform.com/to/JVZF84PA" target="_blank" rel="noopener">Get your free automation audit &rarr;</a>
     <a class="cs-home" href="..">&larr; All case studies</a>
   </div>
@@ -573,96 +593,169 @@
 <script>
 
 (() => {
-  const D = {"day": [["9:12 AM", "The booking phone rings. The front desk is mid-registration.", "The enquiry goes to voicemail. It\u2019s never returned."], ["11:40 AM", "Mr. Nair\u2019s cleaning slot. Nobody shows.", "A 40-minute slot, gone \u2014 no reminder was ever sent."], ["2:20 PM", "A patient finishes treatment. \u201cCome back in six months, okay?\u201d", "That six months has no date, no owner, no reminder."], ["6:15 PM", "A parent texts about a child\u2019s checkup. Clinic\u2019s closed.", "First reply: 9am tomorrow \u2014 if it\u2019s remembered."], ["8:00 PM", "The front desk finally calls back the morning voicemail.", "They were comparing two clinics. They called the other one."]], "flow": [["\ud83d\udce5", "Catch", "One number, 24/7", "AI assistant", "One WhatsApp number for bookings, questions, and reminders. An AI assistant answers in plain, friendly language \u2014 no menus, no \u201cpress 1\u201d, no waiting till opening hours."], ["\ud83d\uddd3\ufe0f", "Book", "Reads the real calendar", "Google Calendar", "It reads the doctor\u2019s actual calendar and offers only slots that exist. Confirms with a calendar invite. The booking phone never rings during a treatment again."], ["\ud83d\udd14", "Remind", "24h + 2h, one tap", "mini-conversations", "Reminders aren\u2019t fire-and-forget: each one is a mini-conversation with one-tap confirm or reschedule \u2014 and a reschedule finds the next real slot in the same thread."], ["\ud83e\ude91", "Recover", "No-shows, caught", "auto rebooking", "If a slot passes without confirmation, a recovery lane takes over within the hour: a friendly rebooking offer with two or three real slots."], ["\ud83e\uddfe", "Onboard", "Forms before the visit", "new patients", "New patients get a digital form in advance \u2014 medical history sits in the file before they sit in the chair."], ["\ud83d\udd01", "Recall", "Every Monday, one by one", "6-month cycle", "The system pulls everyone whose cleaning is due and sends personal recalls \u2014 one message, one patient, one real slot. Not a blast."], ["\ud83d\udcc8", "Report", "The clinic at a glance", "owner\u2019s Monday email", "Bookings, filled, no-shows, recalls sent \u2014 a 9am email before the first patient walks in. Run the clinic from the inbox."]], "sim": [{"sys": "WHATSAPP \u2014 6:15 PM", "node": 0, "who": "customer", "text": "Hi, is Dr. Maria free this week for my daughter\u2019s checkup? She\u2019s 8.", "cap": 0}, {"node": 1, "who": "system", "text": "Hi! Yes \u2014 Dr. Maria has Tue 10:30am, Thu 11am, and Fri 3:30pm. Which works for you?", "cap": 1}, {"who": "customer", "text": "Friday 3:30"}, {"node": 1, "who": "system", "text": "Booked \u2705 Friday 3:30pm with Dr. Maria \u2014 invite sent. You\u2019ll get reminders 24h and 2h before."}, {"sys": "THURSDAY \u2014 REMINDER", "node": 2, "who": "system", "text": "Just a reminder \u2014 see you tomorrow 3:30pm \ud83e\uddb7 Reply \u201cRESCHEDULE\u201d and I\u2019ll find a new slot in one tap.", "cap": 2}, {"sys": "A SLOT PASSES \u2014 RECOVERY LANE", "node": 3, "who": "system", "text": "Hi Ravi \u2014 we missed you this morning. No worries at all. The next open slots are Thu 9am or Fri 2pm \u2014 want one?", "cap": 3}, {"sys": "MONDAY \u2014 RECALL", "node": 5, "who": "system", "text": "Hi Anju! It\u2019s been about six months since Ayesha\u2019s last cleaning. Dr. Maria has Tue 11:30am or Wed 10am \u2014 shall I put one down?", "cap": 4}]};
-  const prog = document.getElementById('progress');
-  if (prog) addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const max = h.scrollHeight - h.clientHeight;
-    prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-  }, { passive: true });
+  try {
+    const D = {"day": [{"time": "9:12 AM", "happened": "The booking phone rings. The front desk is mid-registration.", "lost": "The enquiry goes to voicemail. It\u2019s never returned."}, {"time": "11:40 AM", "happened": "Mr. Nair\u2019s cleaning slot. Nobody shows.", "lost": "A 40-minute slot \u2014 no reminder was ever sent."}, {"time": "2:20 PM", "happened": "\u201cCome back in six months, okay?\u201d \u2014 said to the ceiling.", "lost": "That six months has no date, no owner, no reminder."}, {"time": "6:15 PM", "happened": "A parent texts about a child\u2019s checkup. The clinic is closed.", "lost": "First reply: 9am tomorrow \u2014 if it\u2019s remembered."}, {"time": "8:00 PM", "happened": "The front desk finally calls back the morning voicemail.", "lost": "They were comparing two clinics. They called the other one."}], "flow": [{"ico": "\ud83d\udce5", "title": "Catch", "sub": "One number, 24/7", "what": "One WhatsApp number for bookings, questions, and reminders. An AI assistant answers in plain, friendly language \u2014 no menus, no \u201cpress 1\u201d, no office hours."}, {"ico": "\ud83d\uddd3\ufe0f", "title": "Book", "sub": "Reads the real calendar", "what": "It reads the doctor\u2019s actual Google Calendar and offers only slots that exist. Confirms with an invite. The booking phone never rings during a treatment again."}, {"ico": "\ud83d\udd14", "title": "Remind", "sub": "24h + 2h, one tap", "what": "Each reminder is a mini-conversation: confirm, or reschedule in one tap \u2014 and the reschedule finds the next real slot in the same thread."}, {"ico": "\ud83e\ude91", "title": "Recover", "sub": "No-shows, caught", "what": "A slot that passes without a confirmation wakes the recovery lane within the hour: a friendly rebooking offer with two or three real slots."}, {"ico": "\ud83e\uddfe", "title": "Onboard", "sub": "Forms before the visit", "what": "New patients get a digital form in advance \u2014 the medical history is in the file before they sit in the chair."}, {"ico": "\ud83d\udd01", "title": "Recall", "sub": "Every Monday, one by one", "what": "The system pulls everyone whose six-month cleaning is due and sends a personal recall \u2014 one patient, one real slot. Not a blast."}, {"ico": "\ud83d\udcc8", "title": "Report", "sub": "The clinic at a glance", "what": "Bookings, filled, no-shows, recalls sent \u2014 a 9am email before the first patient walks in. Run the clinic from the inbox."}], "sim": [{"sys": "WHATSAPP \u2014 6:15 PM", "node": 0, "who": "customer", "text": "Hi, is Dr. Maria free this week for my daughter\u2019s checkup? She\u2019s 8.", "cap": 0}, {"node": 1, "who": "system", "text": "Hi! Yes \u2014 Dr. Maria has Tue 10:30am, Thu 11am, and Fri 3:30pm. Which works for you?", "cap": 1}, {"who": "customer", "text": "Friday 3:30"}, {"node": 1, "who": "system", "text": "Booked \u2705 Friday 3:30pm with Dr. Maria \u2014 invite sent. You\u2019ll get reminders 24h and 2h before."}, {"sys": "THURSDAY \u2014 REMINDER", "node": 2, "who": "system", "text": "Just a reminder \u2014 see you tomorrow 3:30pm \ud83e\uddb7 Reply RESCHEDULE and I\u2019ll find a new slot in one tap.", "cap": 2}, {"sys": "A SLOT PASSES \u2014 RECOVERY LANE", "node": 3, "who": "system", "text": "Hi Ravi \u2014 we missed you this morning. No worries at all. The next open slots are Thu 9am or Fri 2pm \u2014 want one?", "cap": 3}, {"sys": "MONDAY \u2014 RECALL", "node": 5, "who": "system", "text": "Hi Anju! It\u2019s been about six months since Ayesha\u2019s last cleaning. Dr. Maria has Tue 11:30am or Wed 10am \u2014 shall I put one down?", "cap": 4}]} || {};
+    // Never let a bad value reach the DOM.
+    const txt = v => (v === undefined || v === null) ? '' : String(v);
+    // Accept object data; fall back to positional arrays (legacy shape).
+    const normDay = m => Array.isArray(m) ? { time: m[0], happened: m[1], lost: m[2] } : (m || {});
+    const normFlow = n => Array.isArray(n) ? { ico: n[0], title: n[1], sub: n[3], what: n[4] } : (n || {});
 
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
-  }), { threshold: 0.12 });
-  document.querySelectorAll('.cs-sec').forEach(el => io.observe(el));
+    const prog = document.getElementById('progress');
+    if (prog) addEventListener('scroll', () => {
+      const h = document.documentElement;
+      if (!h) return;
+      const max = h.scrollHeight - h.clientHeight;
+      prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    }, { passive: true });
 
-  if (D.day) {
-    const body = document.getElementById('dayBody');
-    const setDay = i => {
-      document.querySelectorAll('.cs-day-time').forEach((b, j) => b.classList.toggle('active', j === i));
-      const m = D.day[i];
-      body.innerHTML = '<div class="cs-day-time-big">' + m.time + '</div><div><p>' + m.happened + '</p><p class="cs-lost"><span>Lost</span>' + m.lost + '</p></div>';
-    };
-    document.querySelectorAll('.cs-day-time').forEach((b, j) => b.addEventListener('click', () => setDay(j)));
-    setDay(0);
-  }
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.cs-sec').forEach(el => io.observe(el));
 
-  if (D.flow) {
-    const nodes = [...document.querySelectorAll('.cs-node')];
-    const detail = document.getElementById('flowDetail');
-    const showNode = i => {
-      nodes.forEach((n, j) => n.classList.toggle('active', j === i));
-      const n = D.flow[i];
-      detail.innerHTML = '<div class="cs-fd-top"><span class="cs-fd-ico">' + n.ico + '</span><div><h3>' + n.title + '</h3><p class="cs-fd-sub">' + n.sub + '</p></div></div><p>' + n.what + '</p>';
-    };
-    let chatBusy = false;
-    nodes.forEach((n, i) => n.addEventListener('click', () => { if (!chatBusy) showNode(i); }));
-    showNode(0);
-
-    const chat = document.getElementById('chat');
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    const scrollChat = () => { chat.scrollTop = chat.scrollHeight; };
-    const addMsg = (cls, text) => {
-      const d = document.createElement('div');
-      d.className = 'msg ' + cls; d.textContent = text;
-      chat.appendChild(d); scrollChat();
-    };
-    const typing = cls => {
-      const d = document.createElement('div');
-      d.className = 'msg ' + cls + ' msg-typing';
-      d.innerHTML = '<span></span><span></span><span></span>';
-      chat.appendChild(d); scrollChat();
-      return d;
-    };
-    const btn = document.getElementById('playBtn');
-    btn.addEventListener('click', async () => {
-      if (chatBusy) return;
-      chatBusy = true;
-      btn.classList.add('playing'); btn.textContent = '\u23F3 Watching\u2026';
-      chat.innerHTML = '';
-      document.querySelectorAll('.cs-stepcap').forEach(c => c.classList.remove('on'));
-      for (const s of D.sim) {
-        if (s.node !== undefined) showNode(s.node);
-        if (s.cap !== undefined) {
-          const c = document.querySelector('.cs-stepcap[data-i="' + s.cap + '"]');
-          if (c) c.classList.add('on');
+    // ---------- 02 day timeline ----------
+    if (D.day && D.day.length) {
+      const body = document.getElementById('dayBody');
+      const setDay = i => {
+        const m = normDay(D.day[i]);
+        document.querySelectorAll('.cs-day-time').forEach((b, j) => b.classList.toggle('active', j === i));
+        if (!body) return;
+        if (!m.time && !m.happened && !m.lost) {
+          body.innerHTML = '<p>Nothing to show for this moment yet.</p>';
+          return;
         }
-        if (s.sys) { addMsg('sys', s.sys); await sleep(1000); }
-        const cls = s.who === 'customer' ? 'in' : 'out';
-        const t = typing(cls);
-        await sleep(s.who === 'customer' ? 900 : 1300);
-        t.remove();
-        addMsg(cls, s.text);
-        await sleep(1500);
-      }
-      chatBusy = false;
-      btn.classList.remove('playing'); btn.textContent = '\u25B6 Replay the journey';
-    });
-  }
+        body.innerHTML =
+          '<div class="cs-day-time-big">' + txt(m.time) + '</div>' +
+          '<div><p>' + txt(m.happened) + '</p>' +
+          '<p class="cs-lost"><span>Cost</span>' + txt(m.lost) + '</p></div>';
+      };
+      document.querySelectorAll('.cs-day-time').forEach((b, j) => b.addEventListener('click', () => setDay(j)));
+      setDay(0);
+    }
 
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    cio.unobserve(e.target);
-    const el = e.target, to = +el.dataset.to, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
-    const t0 = performance.now(), dur = 1200;
-    const tick = t => {
-      const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = pre + Math.round(to * ease) + suf;
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }), { threshold: 0.5 });
-  document.querySelectorAll('.count').forEach(el => cio.observe(el));
+    // ---------- 03 system flow + chat simulation ----------
+    if (D.flow && D.flow.length) {
+      const nodes = [...document.querySelectorAll('.cs-node')];
+      const detail = document.getElementById('flowDetail');
+      const showNode = i => {
+        const n = normFlow(D.flow[i]);
+        nodes.forEach((nd, j) => nd.classList.toggle('active', j === i));
+        if (!detail) return;
+        if (!n.title && !n.what) {
+          detail.innerHTML = '<p>Details for this step are coming soon.</p>';
+          return;
+        }
+        detail.innerHTML =
+          '<div class="cs-fd-top"><span class="cs-fd-ico">' + txt(n.ico) + '</span>' +
+          '<div><h3>' + txt(n.title) + '</h3><p class="cs-fd-sub">' + txt(n.sub) + '</p></div></div>' +
+          '<p>' + txt(n.what) + '</p>';
+      };
+      let chatBusy = false;
+      nodes.forEach((n, i) => n.addEventListener('click', () => { if (!chatBusy) showNode(i); }));
+      showNode(0);
+
+      const chat = document.getElementById('chat');
+      const btn = document.getElementById('playBtn');
+      const caps = [...document.querySelectorAll('.cs-stepcap')];
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+      const scrollChat = () => { if (chat) chat.scrollTop = chat.scrollHeight; };
+      const addMsg = (cls, text) => {
+        if (!chat) return;
+        const d = document.createElement('div');
+        d.className = 'msg ' + cls;
+        d.textContent = txt(text);
+        chat.appendChild(d);
+        scrollChat();
+      };
+      const typing = cls => {
+        if (!chat) return null;
+        const d = document.createElement('div');
+        d.className = 'msg ' + cls + ' msg-typing';
+        d.innerHTML = '<span></span><span></span><span></span>';
+        chat.appendChild(d);
+        scrollChat();
+        return d;
+      };
+
+      const play = async () => {
+        if (chatBusy) return;
+        chatBusy = true;
+        if (btn) { btn.classList.add('playing'); btn.textContent = '\u23F3 Watching\u2026'; }
+        if (chat) chat.innerHTML = '';
+        caps.forEach(c => c.classList.remove('on'));
+        try {
+          for (const s of D.sim || []) {
+            if (!s) continue;
+            if (s.node !== undefined) showNode(s.node);
+            if (s.cap !== undefined) {
+              const c = document.querySelector('.cs-stepcap[data-i="' + s.cap + '"]');
+              if (c) c.classList.add('on');
+            }
+            if (s.sys) { addMsg('sys', s.sys); await sleep(900); }
+            if (s.text) {
+              const cls = s.who === 'customer' ? 'in' : 'out';
+              const t = typing(cls);
+              await sleep(s.who === 'customer' ? 900 : 1300);
+              if (t) t.remove();
+              addMsg(cls, s.text);
+              await sleep(1500);
+            }
+          }
+        } catch (err) {
+          // A broken step never leaves the phone half-frozen.
+        } finally {
+          chatBusy = false;
+          if (btn) { btn.classList.remove('playing'); btn.textContent = '\u25B6 Replay the journey'; }
+        }
+      };
+
+      if (btn) btn.addEventListener('click', () => { play(); });
+
+      // The phone is never empty: a hint before the first play.
+      if (chat && D.sim && D.sim.length) {
+        const hint = document.createElement('div');
+        hint.className = 'msg sys';
+        hint.textContent = 'Press \u25B6 \u2014 or just scroll here \u2014 and watch the whole thing play out';
+        chat.appendChild(hint);
+      }
+
+      // Auto-play once, when the simulation scrolls into view.
+      const simEl = document.querySelector('.cs-sim');
+      if (simEl && typeof IntersectionObserver !== 'undefined') {
+        const sio = new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) { sio.unobserve(simEl); if (!chatBusy) play(); }
+        }), { threshold: 0.35 });
+        sio.observe(simEl);
+      }
+    }
+
+    // ---------- counters ----------
+    const cio = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      const el = e.target;
+      const to = +el.dataset.to;
+      if (!isFinite(to)) return;
+      const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+      const t0 = performance.now(), dur = 1200;
+      const tick = t => {
+        const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + Math.round(to * ease) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.5 });
+    document.querySelectorAll('.count').forEach(el => cio.observe(el));
+  } catch (err) {
+    // If anything unexpected breaks, say so — never show "undefined".
+    try {
+      const b = document.createElement('div');
+      b.style.cssText = 'max-width:720px;margin:16px auto;padding:14px 18px;border:1px solid #C02028;border-radius:12px;background:#FDECEA;color:#8E1218;font:14px/1.5 sans-serif';
+      b.textContent = 'Some interactive parts could not load. The rest of the page still works — nothing you need is lost.';
+      if (document.body) document.body.insertBefore(b, document.body.firstChild.nextSibling);
+    } catch (e2) { /* last resort: stay silent */ }
+  }
 })();
 
 </script>

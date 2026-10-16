@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Case Studies · Alomato — Real automation builds, problem to results</title>
-<meta name="description" content="Three automation case studies from Alomato — interior design, real estate, dental clinic. Each starts with the problem, shows the working system, and ends with the numbers.">
+<title>Case Studies · Alomato — Real automation builds, pain to results</title>
+<meta name="description" content="Three automation case studies from Alomato — interior design, real estate, dental clinic. Each starts with the pain and the money it costs, then shows the machine that stops it.">
 <link rel="icon" href="../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
 <link rel="apple-touch-icon" href="../favicons/apple-touch-icon.png">
@@ -326,19 +326,29 @@
   @media(max-width:560px){.cs-crumb{display:none}}
   .cs-cta{white-space:nowrap}
   .cs-hero{max-width:1080px;margin:0 auto;padding:64px 6vw 8px}
-  .cs-hero h1{max-width:22ch}
+  .cs-hero h1{max-width:24ch}
   .cs-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .cs-meta span{font-size:.78rem;font-weight:600;color:var(--accent-deep);background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
   .cs-sec{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .cs-sec.on{opacity:1;transform:none}
-  .cs-sec .sec-head h2{max-width:26ch}
+  .cs-sec .sec-head h2{max-width:28ch}
   .cs-pains{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
   @media(max-width:860px){.cs-pains{grid-template-columns:1fr}}
   .pain{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px}
   .pain .ico{width:44px;height:44px;font-size:1.4rem;display:grid;place-items:center;border-radius:12px;background:rgba(192,32,40,.08)}
   .pain h3{font-size:1.02rem;line-height:1.35}
   .pain p{color:var(--muted);font-size:.9rem;line-height:1.55}
-  .pain .cost{margin-top:auto;font-size:.78rem;font-weight:700;color:var(--accent-deep);background:rgba(192,32,40,.08);border:1px dashed rgba(192,32,40,.3);padding:7px 12px;border-radius:10px;align-self:flex-start}
+  .pain .cost{margin-top:auto;font-size:.78rem;font-weight:700;color:#fff;background:var(--accent);padding:7px 12px;border-radius:10px;align-self:flex-start}
+  .cs-bill{background:var(--ink);border-radius:var(--radius);padding:26px 24px;margin-top:18px;color:#fff}
+  .cs-bill-label{display:block;font-size:.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#EFC189;margin-bottom:16px}
+  .cs-bill-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  @media(max-width:600px){.cs-bill-row{grid-template-columns:1fr}}
+  .cs-bill-cell{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px}
+  .cs-bill-cell b{display:block;font-size:1.35rem;letter-spacing:-.5px;color:#fff}
+  .cs-bill-cell span{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.4;display:block;margin-top:2px}
+  .cs-bill-total{margin:16px 0 6px;font-size:1.05rem;color:rgba(255,255,255,.85)}
+  .cs-bill-total b{color:#EFC189}
+  .cs-bill-fine{margin:0;color:rgba(255,255,255,.45);font-size:.75rem;line-height:1.5;max-width:640px}
   .cs-day-times{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
   .cs-day-time{font:inherit;font-weight:700;font-size:.85rem;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
   .cs-day-time:hover{border-color:rgba(192,32,40,.4)}
@@ -382,7 +392,7 @@
   @keyframes msgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .msg.in{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
   .msg.out{align-self:flex-end;background:#FDECEA;border:1px solid rgba(192,32,40,.18);border-bottom-right-radius:4px}
-  .msg.sys{align-self:center;background:none;border:none;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 0}
+  .msg.sys{align-self:center;background:none;border:none;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 0;text-align:center}
   .msg-typing{display:flex;gap:4px;align-items:center;padding:12px 14px}
   .msg-typing span{width:6px;height:6px;border-radius:50%;background:rgba(46,13,8,.35);animation:blink 1s infinite}
   .msg-typing span:nth-child(2){animation-delay:.2s}
@@ -435,44 +445,44 @@
 
 <header class="cs-hero">
   <span class="pill">Case Studies</span>
-  <h1>Real builds. <span class="grad">Problem &rarr; system &rarr; results.</span></h1>
-  <p class="hero-sub">Three systems, built the way I'd build yours. Click in, and watch a lead travel through the machine — start to finish.</p>
+  <h1>Real builds. <span class="grad">Pain &rarr; machine &rarr; math.</span></h1>
+  <p class="hero-sub">Three systems, built the way I'd build yours. Each one starts with what you're losing every week — then shows the machine that stops it. Click in, and watch a lead travel through it.</p>
 </header>
 <main>
 <section class="cs-sec" style="opacity:1;transform:none">
   <div class="cs-cases">
     <a class="card cs-casecard" href="interior-design.html">
       <span class="case-tag">Interior Design · WhatsApp Lead Engine</span>
-      <h3>Every enquiry answered in 60 seconds — even the 11pm ones</h3>
-      <p>A 107-node WhatsApp engine: capture, qualify, book, follow up. Zero manual chasing.</p>
-      <span class="case-link">Open the case study &rarr;</span>
+      <h3>The 11:47 PM enquiry, answered in 60 seconds</h3>
+      <p>A 107-node engine that catches, qualifies, books, and follows up — while the studio sleeps. ~₹1.5L a month of fees, stopped.</p>
+      <span class="case-link">See the math &rarr;</span>
     </a>
     <a class="card cs-casecard" href="real-estate.html">
       <span class="case-tag">Real Estate · Lead Capture &amp; Routing</span>
-      <h3>Two lead sources, one CRM, the right agent first</h3>
-      <p>Dedupe, AI extraction, round-robin routing, Monday reports. A pipeline you can't lose.</p>
-      <span class="case-link">Open the case study &rarr;</span>
+      <h3>Two doors, one buyer, one CRM</h3>
+      <p>Dedupe, AI extraction, round-robin routing, Monday reports — so no agent ever pitches the same buyer twice. One missed booking ≈ ₹2.25L.</p>
+      <span class="case-link">See the math &rarr;</span>
     </a>
     <a class="card cs-casecard" href="dental-clinic.html">
       <span class="case-tag">Dental Clinic · Booking &amp; Recall</span>
-      <h3>No-shows down. Recalls out — every single one</h3>
-      <p>24/7 WhatsApp booking on the real calendar, smart reminders, automatic rebooking.</p>
-      <span class="case-link">Open the case study &rarr;</span>
+      <h3>1 in 4 chairs empty — and the fix</h3>
+      <p>24/7 WhatsApp booking on the real calendar, one-tap reminders, no-show recovery, personal recalls. ~₹3L a month of empty chairs, filled.</p>
+      <span class="case-link">See the math &rarr;</span>
     </a>
   </div>
   <div class="cs-how">
-    <div><b>01 · The problem</b>In the client's words, with the cost named.</div>
-    <div><b>02 · The system</b>Click any node — or watch a lead travel through it.</div>
-    <div><b>03 · The results</b>Before/after numbers, and the details under the hood.</div>
+    <div><b>01 · The pain</b>In your words — with the cost named, in money.</div>
+    <div><b>02 · The machine</b>Click any node — or watch a lead travel through it.</div>
+    <div><b>03 · The math</b>Before/after numbers, and what they're worth.</div>
   </div>
 </section>
 <section id="cta" class="cs-sec">
   <div class="follow-card">
     <span class="sec-label">Next</span>
-    <h2>Want this on your business?</h2>
-    <p>Every build starts with a free 20-minute audit — no pitch deck. Just an honest look at where your business is leaking time and leads, and what's worth automating first.</p>
+    <h2>Your business has the same leaks. Find them in 20 minutes.</h2>
+    <p>The free audit maps where you’re losing leads, time, and money — and shows you exactly what’s worth automating first. No pitch deck.</p>
     <a class="btn btn-accent" href="https://form.typeform.com/to/JVZF84PA" target="_blank" rel="noopener">Get your free automation audit &rarr;</a>
-    <a class="cs-home" href="../">&larr; Back to Alomato.com</a>
+    <a class="cs-home" href="../">&larr; Back to the main site</a>
   </div>
 </section>
 </main>
@@ -482,96 +492,169 @@
 <script>
 
 (() => {
-  const D = {};
-  const prog = document.getElementById('progress');
-  if (prog) addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const max = h.scrollHeight - h.clientHeight;
-    prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-  }, { passive: true });
+  try {
+    const D = {} || {};
+    // Never let a bad value reach the DOM.
+    const txt = v => (v === undefined || v === null) ? '' : String(v);
+    // Accept object data; fall back to positional arrays (legacy shape).
+    const normDay = m => Array.isArray(m) ? { time: m[0], happened: m[1], lost: m[2] } : (m || {});
+    const normFlow = n => Array.isArray(n) ? { ico: n[0], title: n[1], sub: n[3], what: n[4] } : (n || {});
 
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
-  }), { threshold: 0.12 });
-  document.querySelectorAll('.cs-sec').forEach(el => io.observe(el));
+    const prog = document.getElementById('progress');
+    if (prog) addEventListener('scroll', () => {
+      const h = document.documentElement;
+      if (!h) return;
+      const max = h.scrollHeight - h.clientHeight;
+      prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    }, { passive: true });
 
-  if (D.day) {
-    const body = document.getElementById('dayBody');
-    const setDay = i => {
-      document.querySelectorAll('.cs-day-time').forEach((b, j) => b.classList.toggle('active', j === i));
-      const m = D.day[i];
-      body.innerHTML = '<div class="cs-day-time-big">' + m.time + '</div><div><p>' + m.happened + '</p><p class="cs-lost"><span>Lost</span>' + m.lost + '</p></div>';
-    };
-    document.querySelectorAll('.cs-day-time').forEach((b, j) => b.addEventListener('click', () => setDay(j)));
-    setDay(0);
-  }
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.cs-sec').forEach(el => io.observe(el));
 
-  if (D.flow) {
-    const nodes = [...document.querySelectorAll('.cs-node')];
-    const detail = document.getElementById('flowDetail');
-    const showNode = i => {
-      nodes.forEach((n, j) => n.classList.toggle('active', j === i));
-      const n = D.flow[i];
-      detail.innerHTML = '<div class="cs-fd-top"><span class="cs-fd-ico">' + n.ico + '</span><div><h3>' + n.title + '</h3><p class="cs-fd-sub">' + n.sub + '</p></div></div><p>' + n.what + '</p>';
-    };
-    let chatBusy = false;
-    nodes.forEach((n, i) => n.addEventListener('click', () => { if (!chatBusy) showNode(i); }));
-    showNode(0);
-
-    const chat = document.getElementById('chat');
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    const scrollChat = () => { chat.scrollTop = chat.scrollHeight; };
-    const addMsg = (cls, text) => {
-      const d = document.createElement('div');
-      d.className = 'msg ' + cls; d.textContent = text;
-      chat.appendChild(d); scrollChat();
-    };
-    const typing = cls => {
-      const d = document.createElement('div');
-      d.className = 'msg ' + cls + ' msg-typing';
-      d.innerHTML = '<span></span><span></span><span></span>';
-      chat.appendChild(d); scrollChat();
-      return d;
-    };
-    const btn = document.getElementById('playBtn');
-    btn.addEventListener('click', async () => {
-      if (chatBusy) return;
-      chatBusy = true;
-      btn.classList.add('playing'); btn.textContent = '\u23F3 Watching\u2026';
-      chat.innerHTML = '';
-      document.querySelectorAll('.cs-stepcap').forEach(c => c.classList.remove('on'));
-      for (const s of D.sim) {
-        if (s.node !== undefined) showNode(s.node);
-        if (s.cap !== undefined) {
-          const c = document.querySelector('.cs-stepcap[data-i="' + s.cap + '"]');
-          if (c) c.classList.add('on');
+    // ---------- 02 day timeline ----------
+    if (D.day && D.day.length) {
+      const body = document.getElementById('dayBody');
+      const setDay = i => {
+        const m = normDay(D.day[i]);
+        document.querySelectorAll('.cs-day-time').forEach((b, j) => b.classList.toggle('active', j === i));
+        if (!body) return;
+        if (!m.time && !m.happened && !m.lost) {
+          body.innerHTML = '<p>Nothing to show for this moment yet.</p>';
+          return;
         }
-        if (s.sys) { addMsg('sys', s.sys); await sleep(1000); }
-        const cls = s.who === 'customer' ? 'in' : 'out';
-        const t = typing(cls);
-        await sleep(s.who === 'customer' ? 900 : 1300);
-        t.remove();
-        addMsg(cls, s.text);
-        await sleep(1500);
-      }
-      chatBusy = false;
-      btn.classList.remove('playing'); btn.textContent = '\u25B6 Replay the journey';
-    });
-  }
+        body.innerHTML =
+          '<div class="cs-day-time-big">' + txt(m.time) + '</div>' +
+          '<div><p>' + txt(m.happened) + '</p>' +
+          '<p class="cs-lost"><span>Cost</span>' + txt(m.lost) + '</p></div>';
+      };
+      document.querySelectorAll('.cs-day-time').forEach((b, j) => b.addEventListener('click', () => setDay(j)));
+      setDay(0);
+    }
 
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    cio.unobserve(e.target);
-    const el = e.target, to = +el.dataset.to, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
-    const t0 = performance.now(), dur = 1200;
-    const tick = t => {
-      const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = pre + Math.round(to * ease) + suf;
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }), { threshold: 0.5 });
-  document.querySelectorAll('.count').forEach(el => cio.observe(el));
+    // ---------- 03 system flow + chat simulation ----------
+    if (D.flow && D.flow.length) {
+      const nodes = [...document.querySelectorAll('.cs-node')];
+      const detail = document.getElementById('flowDetail');
+      const showNode = i => {
+        const n = normFlow(D.flow[i]);
+        nodes.forEach((nd, j) => nd.classList.toggle('active', j === i));
+        if (!detail) return;
+        if (!n.title && !n.what) {
+          detail.innerHTML = '<p>Details for this step are coming soon.</p>';
+          return;
+        }
+        detail.innerHTML =
+          '<div class="cs-fd-top"><span class="cs-fd-ico">' + txt(n.ico) + '</span>' +
+          '<div><h3>' + txt(n.title) + '</h3><p class="cs-fd-sub">' + txt(n.sub) + '</p></div></div>' +
+          '<p>' + txt(n.what) + '</p>';
+      };
+      let chatBusy = false;
+      nodes.forEach((n, i) => n.addEventListener('click', () => { if (!chatBusy) showNode(i); }));
+      showNode(0);
+
+      const chat = document.getElementById('chat');
+      const btn = document.getElementById('playBtn');
+      const caps = [...document.querySelectorAll('.cs-stepcap')];
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+      const scrollChat = () => { if (chat) chat.scrollTop = chat.scrollHeight; };
+      const addMsg = (cls, text) => {
+        if (!chat) return;
+        const d = document.createElement('div');
+        d.className = 'msg ' + cls;
+        d.textContent = txt(text);
+        chat.appendChild(d);
+        scrollChat();
+      };
+      const typing = cls => {
+        if (!chat) return null;
+        const d = document.createElement('div');
+        d.className = 'msg ' + cls + ' msg-typing';
+        d.innerHTML = '<span></span><span></span><span></span>';
+        chat.appendChild(d);
+        scrollChat();
+        return d;
+      };
+
+      const play = async () => {
+        if (chatBusy) return;
+        chatBusy = true;
+        if (btn) { btn.classList.add('playing'); btn.textContent = '\u23F3 Watching\u2026'; }
+        if (chat) chat.innerHTML = '';
+        caps.forEach(c => c.classList.remove('on'));
+        try {
+          for (const s of D.sim || []) {
+            if (!s) continue;
+            if (s.node !== undefined) showNode(s.node);
+            if (s.cap !== undefined) {
+              const c = document.querySelector('.cs-stepcap[data-i="' + s.cap + '"]');
+              if (c) c.classList.add('on');
+            }
+            if (s.sys) { addMsg('sys', s.sys); await sleep(900); }
+            if (s.text) {
+              const cls = s.who === 'customer' ? 'in' : 'out';
+              const t = typing(cls);
+              await sleep(s.who === 'customer' ? 900 : 1300);
+              if (t) t.remove();
+              addMsg(cls, s.text);
+              await sleep(1500);
+            }
+          }
+        } catch (err) {
+          // A broken step never leaves the phone half-frozen.
+        } finally {
+          chatBusy = false;
+          if (btn) { btn.classList.remove('playing'); btn.textContent = '\u25B6 Replay the journey'; }
+        }
+      };
+
+      if (btn) btn.addEventListener('click', () => { play(); });
+
+      // The phone is never empty: a hint before the first play.
+      if (chat && D.sim && D.sim.length) {
+        const hint = document.createElement('div');
+        hint.className = 'msg sys';
+        hint.textContent = 'Press \u25B6 \u2014 or just scroll here \u2014 and watch the whole thing play out';
+        chat.appendChild(hint);
+      }
+
+      // Auto-play once, when the simulation scrolls into view.
+      const simEl = document.querySelector('.cs-sim');
+      if (simEl && typeof IntersectionObserver !== 'undefined') {
+        const sio = new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) { sio.unobserve(simEl); if (!chatBusy) play(); }
+        }), { threshold: 0.35 });
+        sio.observe(simEl);
+      }
+    }
+
+    // ---------- counters ----------
+    const cio = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      const el = e.target;
+      const to = +el.dataset.to;
+      if (!isFinite(to)) return;
+      const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+      const t0 = performance.now(), dur = 1200;
+      const tick = t => {
+        const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + Math.round(to * ease) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.5 });
+    document.querySelectorAll('.count').forEach(el => cio.observe(el));
+  } catch (err) {
+    // If anything unexpected breaks, say so — never show "undefined".
+    try {
+      const b = document.createElement('div');
+      b.style.cssText = 'max-width:720px;margin:16px auto;padding:14px 18px;border:1px solid #C02028;border-radius:12px;background:#FDECEA;color:#8E1218;font:14px/1.5 sans-serif';
+      b.textContent = 'Some interactive parts could not load. The rest of the page still works — nothing you need is lost.';
+      if (document.body) document.body.insertBefore(b, document.body.firstChild.nextSibling);
+    } catch (e2) { /* last resort: stay silent */ }
+  }
 })();
 
 </script>
