@@ -401,8 +401,8 @@
   .cs-caps{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
   .cs-caps h3{font-size:1rem;margin-bottom:4px}
   .cs-caps > p{color:var(--muted);font-size:.88rem;margin-bottom:14px}
-  .cs-stepcap{opacity:.35;transition:opacity .3s;font-size:.9rem;line-height:1.5;padding:10px 12px;border-radius:10px;border-left:3px solid var(--line);margin-bottom:8px}
-  .cs-stepcap.on{opacity:1;border-left-color:var(--accent);background:rgba(192,32,40,.05)}
+  .cs-stepcap{opacity:1;transition:background .3s,border-color .3s;font-size:.9rem;line-height:1.5;padding:10px 12px;border-radius:10px;border-left:3px solid var(--line);margin-bottom:8px}
+  .cs-stepcap.on{border-left-color:var(--accent);background:rgba(192,32,40,.08)}
   .cs-stepcap b{color:var(--accent-deep);margin-right:6px}
   .cs-results{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
   .cs-results th,.cs-results td{padding:16px 20px;text-align:left;font-size:.93rem;border-bottom:1px solid var(--line)}
@@ -703,6 +703,7 @@
               await sleep(1500);
             }
           }
+          caps.forEach(c => c.classList.remove('on'));
         } catch (err) {
           // A broken step never leaves the phone half-frozen.
         } finally {
